@@ -28,32 +28,32 @@ namespace ToDoList.Bll.Services
             await _toDoItemRepository.DeleteToDoItemByIdAsync(id);
         }
 
-        public Task<long> InsertToDoItemAsync(ToDoItemCreateDto toDoItemCreateDto)
-        {
-
-        }
-
-        public Task<List<ToDoItemGetDto>> SelectAllToDoItemsAsync(int skip, int take)
+        public Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItemCreateDto)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<ToDoItemGetDto>> SelectByDueDateAsync(DateTime dueDate)
+        public Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<ToDoItemGetDto>> SelectCompletedAsync(int skip, int take)
+        public Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<ToDoItemGetDto>> SelectIncompleteAsync(int skip, int take)
+        public Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ToDoItemGetDto> SelectToDoItemByIdAsync(long id)
+        public Task<List<ToDoItemGetDto>> GetIncompleteAsync(int skip, int take)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id)
         {
             throw new NotImplementedException();
         }
