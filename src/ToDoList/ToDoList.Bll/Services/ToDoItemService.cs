@@ -3,24 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ToDoList.Bll.DTOs;
 using ToDoList.Dal.Entity;
 
 namespace ToDoList.Bll.Services
 {
     public class ToDoItemService : IToDoItemService
     {
-        
-        public List<ToDoItem> SelectByDueDateAsync(DateTime dueDate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ToDoItem SelectToDoItemByIdAsync(ToDoItem toDoItem)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<ToDoItem> SelectAllToDoItemsAsync(int skip, int take)
+        public Task<long> DeleteToDoItemByIdAsync(long id)
         {
             throw new NotImplementedException();
         }
@@ -30,22 +20,32 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public Task<long> DeleteToDoItemByIdAsync(long id)
+        public List<ToDoItemGetDto> SelectAllToDoItemsAsync(int skip, int take)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ToDoItem> UpdateToDoItemAsync(ToDoItem oldItem, ToDoItem newItem)
+        public List<ToDoItemGetDto> SelectByDueDateAsync(DateTime dueDate)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<ToDoItem>> SelectCompletedAsync(int skip, int take)
+        public Task<List<ToDoItemGetDto>> SelectCompletedAsync(int skip, int take)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<ToDoItem>> SelectIncompleteAsync(int skip, int take)
+        public Task<List<ToDoItemGetDto>> SelectIncompleteAsync(int skip, int take)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ToDoItemGetDto SelectToDoItemByIdAsync(ToDoItem toDoItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ToDoItemGetDto> UpdateToDoItemAsync(ToDoItem oldItem, ToDoItem newItem)
         {
             throw new NotImplementedException();
         }
