@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ToDoList.Dal.Configurations;
 using ToDoList.Dal.Entity;
 
 namespace ToDoList.Dal;
@@ -13,5 +14,6 @@ public class MainContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfiguration(new ToDoItemConfigurations());
     }
 }

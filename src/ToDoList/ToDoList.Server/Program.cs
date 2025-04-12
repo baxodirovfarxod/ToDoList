@@ -17,6 +17,7 @@ namespace ToDoList.Server
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Configure();
+            builder.Configuration();
 
             var app = builder.Build();
 
