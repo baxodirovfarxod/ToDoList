@@ -4,7 +4,7 @@ namespace ToDoList.Bll.Services
 {
     public interface IToDoItemService
     {
-        List<ToDoItemGetDto> SelectByDueDateAsync(DateTime dueDate);
+        Task<List<ToDoItemGetDto>> SelectByDueDateAsync(DateTime dueDate);
         Task<ToDoItemGetDto> SelectToDoItemByIdAsync(long id);
         Task<List<ToDoItemGetDto>> SelectAllToDoItemsAsync(int skip, int take);
         Task InsertToDoItemAsync(ToDoItemCreateDto toDoItem);
