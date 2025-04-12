@@ -10,7 +10,7 @@ public class ToDoItemConfigurations : IEntityTypeConfiguration<ToDoItem>
     {
         builder.HasKey(t => t.ToDoItemId);
         builder.Property(t => t.Title).IsRequired().HasMaxLength(100);
-        builder.Property(t => t.Description).HasMaxLength(250);
+        builder.Property(t => t.Description).HasMaxLength(251);
         builder.Property(t => t.IsCompleted).IsRequired();
         builder.Property(t => t.CreatedAt).IsRequired();
     }
