@@ -15,7 +15,7 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public Task InsertToDoItemAsync(ToDoItem toDoItem)
+        public Task InsertToDoItemAsync(ToDoItemCreateDto toDoItem)
         {
             throw new NotImplementedException();
         }
@@ -40,14 +40,15 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public ToDoItemGetDto SelectToDoItemByIdAsync(ToDoItem toDoItem)
+        public ToDoItemGetDto SelectToDoItemByIdAsync(long id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ToDoItemGetDto> UpdateToDoItemAsync(ToDoItem oldItem, ToDoItem newItem)
+        public Task<ToDoItemGetDto> UpdateToDoItemAsync(ToDoItemGetDto newItem)
         {
             throw new NotImplementedException();
         }
     }
+
 }
