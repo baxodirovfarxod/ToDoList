@@ -20,12 +20,12 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public List<ToDoItemGetDto> SelectAllToDoItemsAsync(int skip, int take)
+        public Task<List<ToDoItemGetDto>> SelectAllToDoItemsAsync(int skip, int take)
         {
             throw new NotImplementedException();
         }
 
-        public List<ToDoItemGetDto> SelectByDueDateAsync(DateTime dueDate)
+        public Task<List<ToDoItemGetDto>> SelectByDueDateAsync(DateTime dueDate)
         {
             throw new NotImplementedException();
         }
@@ -40,7 +40,7 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public ToDoItemGetDto SelectToDoItemByIdAsync(long id)
+        public Task<ToDoItemGetDto> SelectToDoItemByIdAsync(long id)
         {
             throw new NotImplementedException();
         }
