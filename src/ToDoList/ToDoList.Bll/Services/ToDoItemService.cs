@@ -59,7 +59,7 @@ namespace ToDoList.Bll.Services
             var incompleteItems = await _toDoItemRepository.SelectIncompleteAsync(skip, take);
 
             var incompleteDtos = incompleteItems
-                .Select(item => MapToGetDto(item))
+                .Select(item => ConvertToGetDto(item))
                 .ToList();
 
             return incompleteDtos;
@@ -94,7 +94,7 @@ namespace ToDoList.Bll.Services
         }
 
 
-        private ToDoItemGetDto MapToGetDto(ToDoItem item)
+        private ToDoItemGetDto ConvertToGetDto(ToDoItem item)
         {
             var res = new ToDoItemGetDto
             {
