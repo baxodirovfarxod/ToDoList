@@ -1,16 +1,13 @@
-﻿namespace ToDoList.Server.Configurations;
+﻿using ToDoList.Bll.Services;
+using ToDoList.Repository.ToDoItemRepository;
+
+namespace ToDoList.Server.Configurations;
 
 public static class DependicyInjectionConfigurations
 {
     public static void Configure(this WebApplicationBuilder builder)
     {
-        //services.AddScoped<IToDoListRepository, ToDoListRepository>();
-        //services.AddScoped<IToDoListService, ToDoListService>();
-        //services.AddScoped<IUnitOfWork, UnitOfWork>();
-        //services.AddScoped<IUnitOfWorkFactory, UnitOfWorkFactory>();
-        //services.AddScoped<ITaskRepository, TaskRepository>();
-        //services.AddScoped<ITaskService, TaskService>();
-        //services.AddScoped<ITaskListRepository, TaskListRepository>();
-        //services.AddScoped<ITaskListService, TaskListService>();
+        builder.Services.AddScoped<IToDoItemRepository, ToDoItemRepository>();
+        builder.Services.AddScoped<IToDoItemService, ToDoItemService>();
     }
 }

@@ -5,14 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using ToDoList.Bll.DTOs;
 using ToDoList.Dal.Entity;
+using ToDoList.Repository.ToDoItemRepository;
 
 namespace ToDoList.Bll.Services
 {
     public class ToDoItemService : IToDoItemService
     {
-        public Task<long> DeleteToDoItemByIdAsync(long id)
+        private readonly IToDoItemRepository _toDoItemRepository;
+
+        public ToDoItemService(IToDoItemRepository toDoItemRepository)
         {
-            throw new NotImplementedException();
+            _toDoItemRepository = toDoItemRepository;
+        }
+
+        public async Task DeleteToDoItemByIdAsync(long id)
+        {
+            var item = await _toDoItemRepository.SelectToDoItemByIdAsync(id);
+            if (item is null)
+            {
+                throw new ArgumentNullException($"ToDoItem with id {id} not found.");
+            }
+            await _toDoItemRepository.DeleteToDoItemByIdAsync(id);
         }
 
         public Task<long> InsertToDoItemAsync(ToDoItemCreateDto toDoItem)
