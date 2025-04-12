@@ -1,4 +1,7 @@
 
+using Microsoft.Extensions.DependencyInjection;
+using ToDoList.Server.Configurations;
+
 namespace ToDoList.Server
 {
     public class Program
@@ -13,6 +16,7 @@ namespace ToDoList.Server
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Configure();
 
             var app = builder.Build();
 
