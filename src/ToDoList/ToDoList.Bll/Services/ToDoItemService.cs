@@ -15,7 +15,7 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public Task InsertToDoItemAsync(ToDoItemCreateDto toDoItem)
+        public Task<long> InsertToDoItemAsync(ToDoItemCreateDto toDoItem)
         {
             throw new NotImplementedException();
         }
