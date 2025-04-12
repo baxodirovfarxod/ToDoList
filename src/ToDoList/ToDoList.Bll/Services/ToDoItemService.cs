@@ -58,10 +58,29 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public Task<ToDoItemGetDto> UpdateToDoItemAsync(ToDoItemGetDto newItem)
+        public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
         {
-            throw new NotImplementedException();
+            var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
+            if (existingItem == null)
+            {
+                throw new Exception($"ToDoItem with ID {newItem.ToDoItemId} not found.");
+            }
+
+            MapToEntity(existingItem, newItem);
+
+            await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
         }
+
+
+        private void MapToEntity(ToDoItem existingItem, ToDoItemUpdateDto newItem)
+        {
+            existingItem.Title = newItem.Title;
+            existingItem.Description = newItem.Description;
+            existingItem.IsCompleted = newItem.IsCompleted;
+            existingItem.DueDate = newItem.DueDate;
+        }
+
+
     }
 
 }
