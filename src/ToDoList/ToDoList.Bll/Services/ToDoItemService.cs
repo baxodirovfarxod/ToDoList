@@ -28,9 +28,9 @@ namespace ToDoList.Bll.Services
             await _toDoItemRepository.DeleteToDoItemByIdAsync(id);
         }
 
-        public Task<long> InsertToDoItemAsync(ToDoItemCreateDto toDoItem)
+        public Task<long> InsertToDoItemAsync(ToDoItemCreateDto toDoItemCreateDto)
         {
-            throw new NotImplementedException();
+
         }
 
         public Task<List<ToDoItemGetDto>> SelectAllToDoItemsAsync(int skip, int take)
