@@ -58,9 +58,22 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public Task<ToDoItemGetDto> UpdateToDoItemAsync(ToDoItemGetDto newItem)
+        public async Task<ToDoItemGetDto> UpdateToDoItemAsync(ToDoItemGetDto newItem)
         {
-            throw new NotImplementedException();
+            var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
+            if (existingItem == null)
+            {
+                throw new Exception("Item not found");
+            }
+
+            existingItem.Title = newItem.Title;
+            existingItem.Description = newItem.Description;
+            existingItem.IsCompleted = newItem.IsCompleted;
+            existingItem.DueDate = newItem.DueDate;
+
+            await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
+
+            return newItem;
         }
     }
 
