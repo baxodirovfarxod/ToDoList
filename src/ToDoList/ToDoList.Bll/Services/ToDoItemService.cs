@@ -66,13 +66,21 @@ namespace ToDoList.Bll.Services
                 throw new Exception($"ToDoItem with ID {newItem.ToDoItemId} not found.");
             }
 
+            MapToEntity(existingItem, newItem);
+
+            await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
+        }
+
+
+        private void MapToEntity(ToDoItem existingItem, ToDoItemUpdateDto newItem)
+        {
             existingItem.Title = newItem.Title;
             existingItem.Description = newItem.Description;
             existingItem.IsCompleted = newItem.IsCompleted;
             existingItem.DueDate = newItem.DueDate;
-
-            await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
         }
+
+
     }
 
 }
