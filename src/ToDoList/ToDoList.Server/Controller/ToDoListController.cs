@@ -17,7 +17,7 @@ namespace ToDoList.Server.Controller
         }
         [HttpPost("add")]
         public async Task<long> AddToDoItem(ToDoItemCreateDto toDoItemCreateDto)
-        { 
+        {
             var id = await _toDoItemService.AddToDoItemAsync(toDoItemCreateDto);
             return id;
         }
@@ -29,15 +29,15 @@ namespace ToDoList.Server.Controller
         }
 
         [HttpGet("getCompleted")]
-        public Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
         {
-            return _toDoItemService.GetCompletedAsync(skip, take);
+            return await _toDoItemService.GetCompletedAsync(skip, take);
         }
 
         [HttpGet("getAll")]
-        public Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
-            return _toDoItemService.GetAllToDoItemsAsync(skip, take);
+            return await _toDoItemService.GetAllToDoItemsAsync(skip, take);
         }
 
         [HttpGet("getById")]
@@ -47,15 +47,22 @@ namespace ToDoList.Server.Controller
         }
 
         [HttpGet("getByDueDate")]
-        public Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
+        public async Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
         {
-            return _toDoItemService.GetByDueDateAsync(dueDate);
+            return await _toDoItemService.GetByDueDateAsync(dueDate);
         }
 
         [HttpGet("getIncompleted")]
-        public Task<List<ToDoItemGetDto>> GetIncompleteAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> GetIncompleteAsync(int skip, int take)
         {
-            return _toDoItemService.GetIncompleteAsync(skip, take);
+            return await _toDoItemService.GetIncompleteAsync(skip, take);
+        }
+
+        [HttpPut("updateToDoItem")]
+
+        public async Task UpdateToDoItem(ToDoItemUpdateDto newItem)
+        {
+            return await _toDoItemService.UpdateToDoItemAsync(newItem);
         }
     }
 }
