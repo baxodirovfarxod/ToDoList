@@ -1,4 +1,6 @@
-﻿using ToDoList.Bll.Services;
+﻿using FluentValidation;
+using ToDoList.Bll.DTOs;
+using ToDoList.Bll.Services;
 using ToDoList.Bll.Validators;
 using ToDoList.Repository.ToDoItemRepository;
 
@@ -13,5 +15,7 @@ public static class DependicyInjectionConfigurations
 
         builder.Services.AddScoped<ToDoItemUpdateDtoValidator, ToDoItemUpdateDtoValidator>();
         builder.Services.AddScoped<ToDoItemCreateDtoValidator, ToDoItemCreateDtoValidator>();
+
+        builder.Services.AddScoped<IValidator<ToDoItemCreateDto>, ToDoItemCreateDtoValidator>();
     }
 }

@@ -1,10 +1,4 @@
 ﻿using FluentValidation;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ToDoList.Bll.DTOs;
 using ToDoList.Dal.Entity;
 using ToDoList.Repository.ToDoItemRepository;
@@ -16,10 +10,10 @@ namespace ToDoList.Bll.Services
         private readonly IToDoItemRepository _toDoItemRepository;
         private readonly IValidator<ToDoItemCreateDto> _toDoItemCreateDtoValidator;
 
-        public ToDoItemService(IToDoItemRepository toDoItemRepository,IValidator<ToDoItemCreateDto> validator)
+        public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator)
         {
             _toDoItemRepository = toDoItemRepository;
-            _toDoItemCreateDtoValidator=validator;
+            _toDoItemCreateDtoValidator = validator;
         }
 
         public async Task DeleteToDoItemByIdAsync(long id)
@@ -47,9 +41,9 @@ namespace ToDoList.Bll.Services
             var id = await _toDoItemRepository.InsertToDoItemAsync(covert);
             return id;
 
-    }
+        }
 
-    public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
             var toDoItems = await _toDoItemRepository.SelectAllToDoItemsAsync(skip, take);
 
@@ -132,7 +126,7 @@ namespace ToDoList.Bll.Services
                 Title = item.Title,
                 Description = item.Description,
                 DueDate = item.DueDate,
-                CreatedAt=DateTime.UtcNow
+                CreatedAt = DateTime.UtcNow
             };
 
             return res;
