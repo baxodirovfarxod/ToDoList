@@ -40,10 +40,7 @@ namespace ToDoList.Bll.Services
                 throw new ValidationException(validationResult.Errors);
             }
 
-            if (toDoItem == null)
-            {
-                throw new ArgumentNullException(nameof(toDoItem));
-            }
+            ArgumentNullException.ThrowIfNull(toDoItem);
             var covert = ConvertCreateDtoToEntity(toDoItem);
 
 
