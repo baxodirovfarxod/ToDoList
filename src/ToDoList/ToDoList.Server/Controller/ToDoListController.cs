@@ -62,7 +62,7 @@ namespace ToDoList.Server.Controller
 
         public async Task UpdateToDoItem(ToDoItemUpdateDto newItem)
         {
-            return await _toDoItemService.UpdateToDoItemAsync(newItem);
+             await _toDoItemService.UpdateToDoItemAsync(newItem);
         }
     }
 }
