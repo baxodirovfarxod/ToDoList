@@ -39,5 +39,11 @@ namespace ToDoList.Server.Controller
         {
             return await _toDoItemService.GetToDoItemByIdAsync(id);
         }
+
+        [HttpGet("getByDueDate")]
+        public Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
+        {
+            return _toDoItemService.GetByDueDateAsync(dueDate);
+        }
     }
 }
