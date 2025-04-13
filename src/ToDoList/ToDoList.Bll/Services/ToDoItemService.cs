@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using ToDoList.Bll.DTOs;
+using ToDoList.Bll.Validators;
 using ToDoList.Dal.Entity;
 using ToDoList.Repository.ToDoItemRepository;
 
@@ -9,6 +10,7 @@ namespace ToDoList.Bll.Services
     {
         private readonly IToDoItemRepository _toDoItemRepository;
         private readonly IValidator<ToDoItemCreateDto> _toDoItemCreateDtoValidator;
+        private readonly IValidator<ToDoItemUpdateDtoValidator> _toDoItemUpdateDtoValidator;
 
         public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator)
         {
@@ -86,6 +88,14 @@ namespace ToDoList.Bll.Services
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
         {
+            var validation = _toDoItemUpdateDtoValidator.Validate(newItem);
+            if (!validation.IsValid)
+            {
+                throw new ValidationException(validation.Errors);
+            }
+
+            ArgumentNullException.ThrowIfNull(newItem);
+
             var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
             if (existingItem == null)
             {
@@ -131,5 +141,6 @@ namespace ToDoList.Bll.Services
 
             return res;
         }
+
     }
 }
