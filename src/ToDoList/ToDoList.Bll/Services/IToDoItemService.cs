@@ -4,14 +4,14 @@ namespace ToDoList.Bll.Services
 {
     public interface IToDoItemService
     {
-        Task<List<ToDoItemGetDto>> SelectByDueDateAsync(DateTime dueDate);
-        Task<ToDoItemGetDto> SelectToDoItemByIdAsync(long id);
-        Task<List<ToDoItemGetDto>> SelectAllToDoItemsAsync(int skip, int take);
-        Task<long> InsertToDoItemAsync(ToDoItemCreateDto toDoItem);
+        Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate);
+        Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id);
+        Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take);
+        Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItem);
         Task DeleteToDoItemByIdAsync(long id);
         Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem);
-        Task<List<ToDoItemGetDto>> SelectCompletedAsync(int skip, int take);
-        Task<List<ToDoItemGetDto>> SelectIncompleteAsync(int skip, int take);
+        Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take);
+        Task<List<ToDoItemGetDto>> GetIncompleteAsync(int skip, int take);
 
     }
 }
