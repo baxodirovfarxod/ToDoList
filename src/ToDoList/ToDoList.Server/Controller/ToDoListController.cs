@@ -15,6 +15,12 @@ namespace ToDoList.Server.Controller
         {
             _toDoItemService = toDoItemService;
         }
+        [HttpPost("add")]
+        public async Task<long> AddToDoItem(ToDoItemCreateDto toDoItemCreateDto)
+        { 
+            var id = await _toDoItemService.AddToDoItemAsync(toDoItemCreateDto);
+            return id;
+        }
 
         [HttpDelete("delete")]
         public async Task DeleteToDoItemByIdAsync(long id)
