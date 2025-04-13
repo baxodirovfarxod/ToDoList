@@ -86,6 +86,8 @@ namespace ToDoList.Bll.Services
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
         {
+            ValidateToDoItemUpdateDto(newItem);
+
             var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
             if (existingItem == null)
             {
@@ -131,5 +133,20 @@ namespace ToDoList.Bll.Services
 
             return res;
         }
+
+
+
+        private void ValidateToDoItemUpdateDto(ToDoItemUpdateDto dto)
+        {
+            if (string.IsNullOrWhiteSpace(dto.Title))
+                throw new Exception("Title is required.");
+
+            if (string.IsNullOrWhiteSpace(dto.Description))
+                throw new Exception("Description is required.");
+
+            if (dto.DueDate <= DateTime.UtcNow)
+                throw new Exception("DueDate must be in the future.");
+        }
+
     }
 }
