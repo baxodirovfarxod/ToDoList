@@ -49,9 +49,13 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
         {
-            throw new NotImplementedException();
+            var completedItems = await _toDoItemRepository.SelectCompletedAsync(skip, take);
+
+            return completedItems
+                       .Select(item => ConvertToGetDto(item))
+                       .ToList();
         }
 
         public async Task<List<ToDoItemGetDto>> GetIncompleteAsync(int skip, int take)

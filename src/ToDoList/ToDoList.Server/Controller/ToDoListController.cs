@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ToDoList.Bll.DTOs;
 using ToDoList.Bll.Services;
 
 namespace ToDoList.Server.Controller
@@ -19,6 +20,12 @@ namespace ToDoList.Server.Controller
         public async Task DeleteToDoItemByIdAsync(long id)
         {
             await _toDoItemService.DeleteToDoItemByIdAsync(id);
+        }
+
+        [HttpGet("getCompleted")]
+        public Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
+        {
+            return _toDoItemService.GetCompletedAsync(skip, take);
         }
     }
 }
