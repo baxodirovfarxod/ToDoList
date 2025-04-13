@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FluentValidation;
+using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +14,12 @@ namespace ToDoList.Bll.Services
     public class ToDoItemService : IToDoItemService
     {
         private readonly IToDoItemRepository _toDoItemRepository;
+        private readonly IValidator<ToDoItemCreateDto> _toDoItemCreateDtoValidator;
 
-        public ToDoItemService(IToDoItemRepository toDoItemRepository)
+        public ToDoItemService(IToDoItemRepository toDoItemRepository,IValidator<ToDoItemCreateDto> validator)
         {
             _toDoItemRepository = toDoItemRepository;
+            _toDoItemCreateDtoValidator=validator;
         }
 
         public async Task DeleteToDoItemByIdAsync(long id)
@@ -28,12 +32,27 @@ namespace ToDoList.Bll.Services
             await _toDoItemRepository.DeleteToDoItemByIdAsync(id);
         }
 
-        public Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItemCreateDto)
+        public async Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItem)
         {
-            throw new NotImplementedException();
-        }
+            var validationResult = _toDoItemCreateDtoValidator.Validate(toDoItem);
+            if (!validationResult.IsValid)
+            {
+                throw new ValidationException(validationResult.Errors);
+            }
 
-        public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
+            if (toDoItem == null)
+            {
+                throw new ArgumentNullException(nameof(toDoItem));
+            }
+            var covert = ConvertCreateDtoToEntity(toDoItem);
+
+
+            var id = await _toDoItemRepository.InsertToDoItemAsync(covert);
+            return id;
+
+    }
+
+    public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
             var toDoItems = await _toDoItemRepository.SelectAllToDoItemsAsync(skip, take);
 
@@ -103,7 +122,20 @@ namespace ToDoList.Bll.Services
                 Title = item.Title,
                 Description = item.Description,
                 IsCompleted = item.IsCompleted,
-                DueDate = item.DueDate
+                DueDate = item.DueDate,
+                CreatedAt = item.CreatedAt,
+            };
+
+            return res;
+        }
+        private ToDoItem ConvertCreateDtoToEntity(ToDoItemCreateDto item)
+        {
+            var res = new ToDoItem
+            {
+                Title = item.Title,
+                Description = item.Description,
+                DueDate = item.DueDate,
+                CreatedAt=DateTime.UtcNow
             };
 
             return res;
