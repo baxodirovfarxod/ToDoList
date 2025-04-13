@@ -45,5 +45,11 @@ namespace ToDoList.Server.Controller
         {
             return _toDoItemService.GetByDueDateAsync(dueDate);
         }
+
+        [HttpGet("getIncompleted")]
+        public Task<List<ToDoItemGetDto>> GetIncompleteAsync(int skip, int take)
+        {
+            return _toDoItemService.GetIncompleteAsync(skip, take);
+        }
     }
 }
