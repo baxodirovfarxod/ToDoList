@@ -28,10 +28,16 @@ namespace ToDoList.Server.Controller
             return _toDoItemService.GetCompletedAsync(skip, take);
         }
 
-        [HttpGet("getAllToDoItems")]
+        [HttpGet("getAll")]
         public Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
             return _toDoItemService.GetAllToDoItemsAsync(skip, take);
+        }
+
+        [HttpGet("getById")]
+        public async Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id)
+        {
+            return await _toDoItemService.GetToDoItemByIdAsync(id);
         }
     }
 }
