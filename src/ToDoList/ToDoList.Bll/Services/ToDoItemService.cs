@@ -33,9 +33,15 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
-            throw new NotImplementedException();
+            var toDoItems = await _toDoItemRepository.SelectAllToDoItemsAsync(skip, take);
+
+            var toDoItemDtos = toDoItems
+                .Select(item => MapToGetDto(item))
+                .ToList();
+
+            return toDoItemDtos;
         }
 
         public Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
@@ -78,6 +84,21 @@ namespace ToDoList.Bll.Services
             existingItem.Description = newItem.Description;
             existingItem.IsCompleted = newItem.IsCompleted;
             existingItem.DueDate = newItem.DueDate;
+        }
+
+
+        private ToDoItemGetDto MapToGetDto(ToDoItem item)
+        {
+            var res = new ToDoItemGetDto
+            {
+                ToDoItemId = item.ToDoItemId,
+                Title = item.Title,
+                Description = item.Description,
+                IsCompleted = item.IsCompleted,
+                DueDate = item.DueDate
+            };
+
+            return res;
         }
 
 
