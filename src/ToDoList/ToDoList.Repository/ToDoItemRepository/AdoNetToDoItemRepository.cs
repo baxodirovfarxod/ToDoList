@@ -1,12 +1,32 @@
-﻿using ToDoList.Dal.Entity;
+﻿using Microsoft.Data.SqlClient;
+using ToDoList.Dal.Entity;
+using ToDoList.Repository.Settings;
+
 
 namespace ToDoList.Repository.ToDoItemRepository;
 
 public class AdoNetToDoItemRepository : IToDoItemRepository
 {
-    public Task DeleteToDoItemByIdAsync(long id)
+
+    private readonly string ConnectionString;
+
+    public AdoNetToDoItemRepository(SqlDBConeectionString sqlDBConeectionString)
     {
-        throw new NotImplementedException();
+        ConnectionString = sqlDBConeectionString.ConnectionString;
+    }
+    public async Task DeleteToDoItemByIdAsync(long id)
+    {
+        string sql = "DELETE FROM ToDoList WHERE ToDoListId = @Id;";
+
+        using (SqlConnection conn = new SqlConnection(ConnectionString))
+        {
+            await conn.OpenAsync();
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Id", id);
+                await cmd.ExecuteNonQueryAsync();
+            }
+        }
     }
 
     public Task<long> InsertToDoItemAsync(ToDoItem toDoItem)
