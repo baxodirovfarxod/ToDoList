@@ -54,10 +54,17 @@ namespace ToDoList.Bll.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<ToDoItemGetDto>> SelectIncompleteAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> SelectIncompleteAsync(int skip, int take)
         {
-            throw new NotImplementedException();
+            var incompleteItems = await _toDoItemRepository.SelectIncompleteAsync(skip, take);
+
+            var incompleteDtos = incompleteItems
+                .Select(item => ConvertToGetDto(item))
+                .ToList();
+
+            return incompleteDtos;
         }
+
 
         public Task<ToDoItemGetDto> SelectToDoItemByIdAsync(long id)
         {
@@ -87,7 +94,7 @@ namespace ToDoList.Bll.Services
         }
 
 
-        private ToDoItemGetDto MapToGetDto(ToDoItem item)
+        private ToDoItemGetDto ConvertToGetDto(ToDoItem item)
         {
             var res = new ToDoItemGetDto
             {
