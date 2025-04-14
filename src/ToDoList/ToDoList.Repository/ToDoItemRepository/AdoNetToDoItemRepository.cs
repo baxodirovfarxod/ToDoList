@@ -54,10 +54,41 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
         throw new NotImplementedException();
     }
 
-    public Task<ToDoItem> SelectToDoItemByIdAsync(long id)
+    public async Task<ToDoItem> SelectToDoItemByIdAsync(long id)
     {
-        throw new NotImplementedException();
+        string sql = @"
+        SELECT ToDoItemId, Title, Description, IsCompleted, CreatedAt, DueDate
+        FROM ToDoList
+        WHERE ToDoItemId = @Id";
+
+        using (SqlConnection conn = new SqlConnection(ConnectionString))
+        {
+            await conn.OpenAsync();
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@Id", id);
+
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    if (await reader.ReadAsync())
+                    {
+                        return new ToDoItem
+                        {
+                            ToDoItemId = reader.GetInt64(0),
+                            Title = reader.GetString(1),
+                            Description = reader.GetString(2),
+                            IsCompleted = reader.GetBoolean(3),
+                            CreatedAt = reader.GetDateTime(4),
+                            DueDate = reader.GetDateTime(5)
+                        };
+                    }
+                }
+            }
+        }
+
+        return null; 
     }
+}
 
     public Task UpdateToDoItemAsync(ToDoItem toDoItem)
     {
