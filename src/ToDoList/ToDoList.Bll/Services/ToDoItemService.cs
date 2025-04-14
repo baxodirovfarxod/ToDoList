@@ -56,10 +56,17 @@ namespace ToDoList.Bll.Services
             return toDoItemDtos;
         }
 
-        public Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
+        public async Task<List<ToDoItemGetDto>> SelectByDueDateAsync(DateTime dueDate)
         {
-            throw new NotImplementedException();
+            var result = await _toDoItemRepository.SelectByDueDateAsync(dueDate);
+            var convert = new List<ToDoItemGetDto>();
+            foreach (var item in result)
+            {
+                convert.Add(ConvertToGetDto(item));
+            }
+            return convert;
         }
+
 
         public async Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
         {
@@ -81,9 +88,11 @@ namespace ToDoList.Bll.Services
             return incompleteDtos;
         }
 
-        public Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id)
+        public async Task<ToDoItemGetDto> SelectToDoItemByIdAsync(long id)
         {
-            throw new NotImplementedException();
+            var founded = await _toDoItemRepository.SelectToDoItemByIdAsync(id);
+            var convert = ConvertToGetDto(founded);
+            return convert;
         }
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
