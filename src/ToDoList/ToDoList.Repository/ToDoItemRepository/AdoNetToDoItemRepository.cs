@@ -39,10 +39,45 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
         throw new NotImplementedException();
     }
 
-    public Task<ICollection<ToDoItem>> SelectByDueDateAsync(DateTime dueDate)
+    public async Task<ICollection<ToDoItem>> SelectByDueDateAsync(DateTime dueDate)
     {
-        throw new NotImplementedException();
+        var items = new List<ToDoItem>();
+
+        string sql = @"
+        SELECT ToDoItemId, Title, Description, IsCompleted, CreatedAt, DueDate
+        FROM ToDoList
+        WHERE CAST(DueDate AS DATE) = @DueDate";
+
+        using (SqlConnection conn = new SqlConnection(ConnectionString))
+        {
+            await conn.OpenAsync();
+            using (SqlCommand cmd = new SqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@DueDate", dueDate.Date);
+
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        var item = new ToDoItem
+                        {
+                            ToDoItemId = reader.GetInt64(0),
+                            Title = reader.GetString(1),
+                            Description = reader.GetString(2),
+                            IsCompleted = reader.GetBoolean(3),
+                            CreatedAt = reader.GetDateTime(4),
+                            DueDate = reader.GetDateTime(5)
+                        };
+
+                        items.Add(item);
+                    }
+                }
+            }
+        }
+
+        return items;
     }
+
 
     public Task<ICollection<ToDoItem>> SelectCompletedAsync(int skip, int take)
     {
