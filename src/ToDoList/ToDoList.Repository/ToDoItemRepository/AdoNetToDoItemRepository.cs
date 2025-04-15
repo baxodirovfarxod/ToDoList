@@ -53,6 +53,11 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
         }
     }
 
+    public IQueryable<ToDoItem> SelectAll()
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<ICollection<ToDoItem>> SelectAllToDoItemsAsync(int skip, int take)
     {
         var items = new List<ToDoItem>();

@@ -35,9 +35,9 @@ namespace ToDoList.Server.Controller
         }
 
         [HttpGet("getAll")]
-        public Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
-            return _toDoItemService.GetAllToDoItemsAsync(skip, take);
+            return await _toDoItemService.GetAllToDoItemsAsync(skip, take);
         }
 
         [HttpGet("getById")]
