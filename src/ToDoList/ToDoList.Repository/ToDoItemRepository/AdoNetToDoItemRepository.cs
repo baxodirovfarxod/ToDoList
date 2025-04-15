@@ -16,7 +16,7 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
     }
     public async Task DeleteToDoItemByIdAsync(long id)
     {
-        string sql = "DELETE FROM ToDoList WHERE ToDoListId = @Id;";
+        string sql = "DELETE FROM ToDoItems WHERE ToDoItemId = @Id;";
 
         using (SqlConnection conn = new SqlConnection(ConnectionString))
         {
