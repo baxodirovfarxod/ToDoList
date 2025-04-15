@@ -133,5 +133,10 @@ namespace ToDoList.Bll.Services
 
             return res;
         }
+
+        Task<GetAllResponseModel> IToDoItemService.GetAllToDoItemsAsync(int skip, int take)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
