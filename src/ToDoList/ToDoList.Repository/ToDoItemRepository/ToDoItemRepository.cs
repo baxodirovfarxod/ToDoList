@@ -28,12 +28,13 @@ public class ToDoItemRepository : IToDoItemRepository
 
     }
 
+    public IQueryable<ToDoItem> SelectAll()
+    {
+        return MainContext.ToDoItems;
+    }
+
     public async Task<ICollection<ToDoItem>> SelectAllToDoItemsAsync(int skip, int take)
     {
-        if (skip < 0 || take <= 0)
-        {
-            throw new ArgumentOutOfRangeException("Skip and take must be non-negative and take must be greater than zero.");
-        }
         return await MainContext.ToDoItems
               .Skip(skip)
               .Take(take)

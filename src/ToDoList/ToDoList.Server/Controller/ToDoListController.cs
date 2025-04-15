@@ -10,14 +10,16 @@ namespace ToDoList.Server.Controller
     public class ToDoListController : ControllerBase
     {
         private readonly IToDoItemService _toDoItemService;
+        private readonly IServiceProvider _serviceProvider;
 
-        public ToDoListController(IToDoItemService toDoItemService)
+        public ToDoListController(IToDoItemService toDoItemService, IServiceProvider serviceProvider)
         {
             _toDoItemService = toDoItemService;
+            _serviceProvider = serviceProvider;
         }
         [HttpPost("add")]
         public async Task<long> AddToDoItem(ToDoItemCreateDto toDoItemCreateDto)
-        {
+        {   
             var id = await _toDoItemService.AddToDoItemAsync(toDoItemCreateDto);
             return id;
         }
@@ -35,7 +37,7 @@ namespace ToDoList.Server.Controller
         }
 
         [HttpGet("getAll")]
-        public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
+        public async Task<GetAllResponseModel> GetAllToDoItemsAsync(int skip, int take)
         {
             return await _toDoItemService.GetAllToDoItemsAsync(skip, take);
         }
@@ -63,6 +65,14 @@ namespace ToDoList.Server.Controller
         public async Task UpdateToDoItem(ToDoItemUpdateDto newItem)
         {
              await _toDoItemService.UpdateToDoItemAsync(newItem);
+        }
+
+
+        [HttpPost("calculate")]
+        public int Calculate(List<int> nums)
+        {
+            var evenSumContext = _serviceProvider.GetRequiredService<EvenSumContext>();
+            return evenSumContext.ExecuteStrategy(nums);
         }
     }
 }

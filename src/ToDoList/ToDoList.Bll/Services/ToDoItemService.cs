@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 using ToDoList.Bll.DTOs;
 using ToDoList.Bll.Validators;
 using ToDoList.Dal.Entity;
@@ -45,15 +46,27 @@ namespace ToDoList.Bll.Services
 
         }
 
-        public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
+        public async Task<GetAllResponseModel> GetAllToDoItemsAsync(int skip, int take)
         {
-            var toDoItems = await _toDoItemRepository.SelectAllToDoItemsAsync(skip, take);
+            if (skip < 0) skip = 0;
+            if (take < 0 || take > 100) take = 100;
+
+            var query = _toDoItemRepository.SelectAll();
+            query = query.Skip(skip).Take(take);
+
+            var toDoItems = await query.ToListAsync();    
 
             var toDoItemDtos = toDoItems
                 .Select(item => ConvertToGetDto(item))
                 .ToList();
 
-            return toDoItemDtos;
+            var getAllResponseModel = new GetAllResponseModel()
+            {
+                ToDoItemGetDtos = toDoItemDtos,
+                TotalCount = await _toDoItemRepository.SelectAll().CountAsync(),
+            };
+
+            return getAllResponseModel;
         }
 
         public Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
@@ -88,23 +101,23 @@ namespace ToDoList.Bll.Services
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
         {
-            var validation = _toDoItemUpdateDtoValidator.Validate(newItem);
-            if (!validation.IsValid)
-            {
-                throw new ValidationException(validation.Errors);
-            }
+            //var validation = _toDoItemUpdateDtoValidator.Validate(newItem);
+            //if (!validation.IsValid)
+            //{
+            //    throw new ValidationException(validation.Errors);
+            //}
 
-            ArgumentNullException.ThrowIfNull(newItem);
+            //ArgumentNullException.ThrowIfNull(newItem);
 
-            var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
-            if (existingItem == null)
-            {
-                throw new Exception($"ToDoItem with ID {newItem.ToDoItemId} not found.");
-            }
+            //var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
+            //if (existingItem == null)
+            //{
+            //    throw new Exception($"ToDoItem with ID {newItem.ToDoItemId} not found.");
+            //}
 
-            ConvertToEntity(existingItem, newItem);
+            //ConvertToEntity(existingItem, newItem);
 
-            await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
+            //await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
         }
 
         private void ConvertToEntity(ToDoItem existingItem, ToDoItemUpdateDto newItem)
