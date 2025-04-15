@@ -6,7 +6,7 @@ namespace ToDoList.Bll.Services
     {
         Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate);
         Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id);
-        Task<GetAllResponseModel> GetAllToDoItemsAsync(int skip, int take);
+        Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take);
         Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItem);
         Task DeleteToDoItemByIdAsync(long id);
         Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem);

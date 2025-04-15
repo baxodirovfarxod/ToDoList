@@ -1,7 +1,5 @@
 ﻿using FluentValidation;
-using Microsoft.EntityFrameworkCore;
 using ToDoList.Bll.DTOs;
-using ToDoList.Bll.Validators;
 using ToDoList.Dal.Entity;
 using ToDoList.Repository.ToDoItemRepository;
 
@@ -11,7 +9,6 @@ namespace ToDoList.Bll.Services
     {
         private readonly IToDoItemRepository _toDoItemRepository;
         private readonly IValidator<ToDoItemCreateDto> _toDoItemCreateDtoValidator;
-        private readonly IValidator<ToDoItemUpdateDtoValidator> _toDoItemUpdateDtoValidator;
 
         public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator)
         {
@@ -46,32 +43,21 @@ namespace ToDoList.Bll.Services
 
         }
 
-        public async Task<GetAllResponseModel> GetAllToDoItemsAsync(int skip, int take)
+        public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
-            if (skip < 0) skip = 0;
-            if (take < 0 || take > 100) take = 100;
-
-            var query = _toDoItemRepository.SelectAll();
-            query = query.Skip(skip).Take(take);
-
-            var toDoItems = await query.ToListAsync();    
+            var toDoItems = await _toDoItemRepository.SelectAllToDoItemsAsync(skip, take);
 
             var toDoItemDtos = toDoItems
                 .Select(item => ConvertToGetDto(item))
                 .ToList();
 
-            var getAllResponseModel = new GetAllResponseModel()
-            {
-                ToDoItemGetDtos = toDoItemDtos,
-                TotalCount = await _toDoItemRepository.SelectAll().CountAsync(),
-            };
-
-            return getAllResponseModel;
+            return toDoItemDtos;
         }
 
-        public Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
+        public async Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
         {
-            throw new NotImplementedException();
+            var result = await _toDoItemRepository.SelectByDueDateAsync(dueDate);
+            return result.Select(item => ConvertToGetDto(item)).ToList();
         }
 
         public async Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
@@ -94,30 +80,23 @@ namespace ToDoList.Bll.Services
             return incompleteDtos;
         }
 
-        public Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id)
+        public async Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id)
         {
-            throw new NotImplementedException();
+            var founded = await _toDoItemRepository.SelectToDoItemByIdAsync(id);
+            return ConvertToGetDto(founded);
         }
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
         {
-            //var validation = _toDoItemUpdateDtoValidator.Validate(newItem);
-            //if (!validation.IsValid)
-            //{
-            //    throw new ValidationException(validation.Errors);
-            //}
+            var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
+            if (existingItem == null)
+            {
+                throw new Exception($"ToDoItem with ID {newItem.ToDoItemId} not found.");
+            }
 
-            //ArgumentNullException.ThrowIfNull(newItem);
+            ConvertToEntity(existingItem, newItem);
 
-            //var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
-            //if (existingItem == null)
-            //{
-            //    throw new Exception($"ToDoItem with ID {newItem.ToDoItemId} not found.");
-            //}
-
-            //ConvertToEntity(existingItem, newItem);
-
-            //await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
+            await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
         }
 
         private void ConvertToEntity(ToDoItem existingItem, ToDoItemUpdateDto newItem)
@@ -154,6 +133,5 @@ namespace ToDoList.Bll.Services
 
             return res;
         }
-
     }
 }

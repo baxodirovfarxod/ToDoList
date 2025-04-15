@@ -1,6 +1,5 @@
 
 using Microsoft.Extensions.DependencyInjection;
-using ToDoList.Bll.Services;
 using ToDoList.Server.Configurations;
 
 namespace ToDoList.Server
@@ -19,18 +18,6 @@ namespace ToDoList.Server
             builder.Services.AddSwaggerGen();
             builder.Configure();
             builder.Configuration();
-
-
-            // Register strategies
-            builder.Services.AddTransient<GetSummEvenNumbersWithFor>();
-            builder.Services.AddTransient<GetSummEvenNumbersWithForeach>();
-            builder.Services.AddTransient<GetSummEvenNumbersWithLinq>();
-     
-            // Register strategy resolver and context
-            builder.Services.AddSingleton<EvenSumStrategyResolver>();
-            builder.Services.AddScoped<EvenSumContext>();
-
-
 
             var app = builder.Build();
 
