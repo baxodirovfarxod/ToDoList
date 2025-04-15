@@ -29,9 +29,28 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
         }
     }
 
-    public Task<long> InsertToDoItemAsync(ToDoItem toDoItem)
+    public async Task<long> InsertToDoItemAsync(ToDoItem toDoItem)
     {
-        throw new NotImplementedException();
+        string sql = @"
+        INSERT INTO ToDoList (Title, Description, IsCompleted, CreatedAt, DueDate)
+        OUTPUT INSERTED.ToDoItemId
+        VALUES (@Title, @Description, @IsCompleted, @CreatedAt, @DueDate);";
+
+        using (SqlConnection con = new SqlConnection(ConnectionString))
+        {
+            await con.OpenAsync();
+            using (SqlCommand cmd = new SqlCommand(sql, con))
+            {
+                cmd.Parameters.AddWithValue("@Title", toDoItem.Title);
+                cmd.Parameters.AddWithValue("@Description", toDoItem.Description);
+                cmd.Parameters.AddWithValue("@IsCompleted", toDoItem.IsCompleted);
+                cmd.Parameters.AddWithValue("@CreatedAt", toDoItem.CreatedAt);
+                cmd.Parameters.AddWithValue("@DueDate", toDoItem.DueDate);
+
+                var insertedId = (long)await cmd.ExecuteScalarAsync();
+                return insertedId;
+            }
+        }
     }
 
     public Task<ICollection<ToDoItem>> SelectAllToDoItemsAsync(int skip, int take)
