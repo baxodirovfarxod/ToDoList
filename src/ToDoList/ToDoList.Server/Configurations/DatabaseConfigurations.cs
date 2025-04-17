@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ToDoList.Bll.ProFile;
 using ToDoList.Dal;
 using ToDoList.Repository.Settings;
 
@@ -11,8 +12,6 @@ public static class DatabaseConfigurations
         var connectionString = builder.Configuration.GetConnectionString("DatabaseConnection");
 
         builder.Services.AddSingleton(new SqlDBConeectionString(connectionString));
-
-        builder.Services.AddDbContext<MainContext>(options =>
-            options.UseSqlServer(connectionString));
+        builder.Services.AddAutoMapper(typeof(MappingProFile));
     }
 }

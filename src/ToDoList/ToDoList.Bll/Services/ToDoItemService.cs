@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using AutoMapper;
+using FluentValidation;
 using ToDoList.Bll.DTOs;
 using ToDoList.Dal.Entity;
 using ToDoList.Repository.ToDoItemRepository;
@@ -9,11 +10,29 @@ namespace ToDoList.Bll.Services
     {
         private readonly IToDoItemRepository _toDoItemRepository;
         private readonly IValidator<ToDoItemCreateDto> _toDoItemCreateDtoValidator;
+        private readonly IMapper _mapper;
 
-        public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator)
+        public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator, IMapper mapper)
         {
             _toDoItemRepository = toDoItemRepository;
             _toDoItemCreateDtoValidator = validator;
+            _mapper = mapper;
+        }
+
+        public async Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItem)
+        {
+            var validationResult = _toDoItemCreateDtoValidator.Validate(toDoItem);
+            if (!validationResult.IsValid)
+            {
+                throw new ValidationException(validationResult.Errors);
+            }
+
+            ArgumentNullException.ThrowIfNull(toDoItem);
+            var covert = _mapper.Map<ToDoItem>(toDoItem);
+
+
+            var id = await _toDoItemRepository.InsertToDoItemAsync(covert);
+            return id;
         }
 
         public async Task DeleteToDoItemByIdAsync(long id)
@@ -26,29 +45,12 @@ namespace ToDoList.Bll.Services
             await _toDoItemRepository.DeleteToDoItemByIdAsync(id);
         }
 
-        public async Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItem)
-        {
-            var validationResult = _toDoItemCreateDtoValidator.Validate(toDoItem);
-            if (!validationResult.IsValid)
-            {
-                throw new ValidationException(validationResult.Errors);
-            }
-
-            ArgumentNullException.ThrowIfNull(toDoItem);
-            var covert = ConvertCreateDtoToEntity(toDoItem);
-
-
-            var id = await _toDoItemRepository.InsertToDoItemAsync(covert);
-            return id;
-
-        }
-
         public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
             var toDoItems = await _toDoItemRepository.SelectAllToDoItemsAsync(skip, take);
 
             var toDoItemDtos = toDoItems
-                .Select(item => ConvertToGetDto(item))
+                .Select(item => _mapper.Map<ToDoItemGetDto>(item))
                 .ToList();
 
             return toDoItemDtos;
@@ -57,7 +59,7 @@ namespace ToDoList.Bll.Services
         public async Task<List<ToDoItemGetDto>> GetByDueDateAsync(DateTime dueDate)
         {
             var result = await _toDoItemRepository.SelectByDueDateAsync(dueDate);
-            return result.Select(item => ConvertToGetDto(item)).ToList();
+            return result.Select(item => _mapper.Map<ToDoItemGetDto>(item)).ToList();
         }
 
         public async Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take)
@@ -65,7 +67,7 @@ namespace ToDoList.Bll.Services
             var completedItems = await _toDoItemRepository.SelectCompletedAsync(skip, take);
 
             return completedItems
-                       .Select(item => ConvertToGetDto(item))
+                       .Select(item => _mapper.Map<ToDoItemGetDto>(item))
                        .ToList();
         }
 
@@ -74,7 +76,7 @@ namespace ToDoList.Bll.Services
             var incompleteItems = await _toDoItemRepository.SelectIncompleteAsync(skip, take);
 
             var incompleteDtos = incompleteItems
-                .Select(item => ConvertToGetDto(item))
+                .Select(item => _mapper.Map<ToDoItemGetDto>(item))
                 .ToList();
 
             return incompleteDtos;
@@ -83,7 +85,7 @@ namespace ToDoList.Bll.Services
         public async Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id)
         {
             var founded = await _toDoItemRepository.SelectToDoItemByIdAsync(id);
-            return ConvertToGetDto(founded);
+            return _mapper.Map<ToDoItemGetDto>(founded);
         }
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
@@ -94,49 +96,9 @@ namespace ToDoList.Bll.Services
                 throw new Exception($"ToDoItem with ID {newItem.ToDoItemId} not found.");
             }
 
-            ConvertToEntity(existingItem, newItem);
+            _mapper.Map<ToDoItem>(newItem);
 
             await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
         }
-
-        private void ConvertToEntity(ToDoItem existingItem, ToDoItemUpdateDto newItem)
-        {
-            existingItem.Title = newItem.Title;
-            existingItem.Description = newItem.Description;
-            existingItem.IsCompleted = newItem.IsCompleted;
-            existingItem.DueDate = newItem.DueDate;
-        }
-
-        private ToDoItemGetDto ConvertToGetDto(ToDoItem item)
-        {
-            var res = new ToDoItemGetDto
-            {
-                ToDoItemId = item.ToDoItemId,
-                Title = item.Title,
-                Description = item.Description,
-                IsCompleted = item.IsCompleted,
-                DueDate = item.DueDate,
-                CreatedAt = item.CreatedAt,
-            };
-
-            return res;
-        }
-        private ToDoItem ConvertCreateDtoToEntity(ToDoItemCreateDto item)
-        {
-            var res = new ToDoItem
-            {
-                Title = item.Title,
-                Description = item.Description,
-                DueDate = item.DueDate,
-                CreatedAt = DateTime.UtcNow
-            };
-
-            return res;
-        }
-
-        //Task<GetAllResponseModel> IToDoItemService.GetAllToDoItemsAsync(int skip, int take)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
