@@ -57,5 +57,11 @@ namespace ToDoList.Server.Controller
         {
             return _toDoItemService.GetIncompleteAsync(skip, take);
         }
+
+        [HttpPut("update")]
+        public async Task UpdateToDoItemAsync(ToDoItemUpdateDto toDoItemUpdateDto)
+        {
+            await _toDoItemService.UpdateToDoItemAsync(toDoItemUpdateDto);
+        }
     }
 }
