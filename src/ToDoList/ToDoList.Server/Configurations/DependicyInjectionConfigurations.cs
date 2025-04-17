@@ -10,7 +10,7 @@ public static class DependicyInjectionConfigurations
 {
     public static void Configure(this WebApplicationBuilder builder)
     {
-        builder.Services.AddScoped<IToDoItemRepository, AdoNetToDoItemRepository>();
+        builder.Services.AddScoped<IToDoItemRepository, AdoNetWithSpAndFn>();
         builder.Services.AddScoped<IToDoItemService, ToDoItemService>();
 
         builder.Services.AddScoped<ToDoItemUpdateDtoValidator, ToDoItemUpdateDtoValidator>();

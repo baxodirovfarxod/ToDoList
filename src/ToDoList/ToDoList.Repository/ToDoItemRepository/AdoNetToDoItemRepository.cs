@@ -29,6 +29,11 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
         }
     }
 
+    public Task<ICollection<ToDoItem>> GetUpcomingDeadlinesAsync()
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<long> InsertToDoItemAsync(ToDoItem toDoItem)
     {
         string sql = @"
@@ -51,6 +56,11 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
                 return (long)insertedId;
             }
         }
+    }
+
+    public Task<ICollection<ToDoItem>> SearchToDoItemsAsync(string keyword)
+    {
+        throw new NotImplementedException();
     }
 
     public IQueryable<ToDoItem> SelectAll()
@@ -221,6 +231,11 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
         }
 
         return items;
+    }
+
+    public Task<ICollection<ToDoItem>> SelectOverdueItemsAsync()
+    {
+        throw new NotImplementedException();
     }
 
     public async Task<ToDoItem> SelectToDoItemByIdAsync(long id)

@@ -20,12 +20,22 @@ public class ToDoItemRepository : IToDoItemRepository
         await MainContext.SaveChangesAsync();
     }
 
+    public Task<ICollection<ToDoItem>> GetUpcomingDeadlinesAsync()
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<long> InsertToDoItemAsync(ToDoItem toDoItem)
     {
         await MainContext.ToDoItems.AddAsync(toDoItem);
         await MainContext.SaveChangesAsync();
         return toDoItem.ToDoItemId;
 
+    }
+
+    public Task<ICollection<ToDoItem>> SearchToDoItemsAsync(string keyword)
+    {
+        throw new NotImplementedException();
     }
 
     public async Task<ICollection<ToDoItem>> SelectAllToDoItemsAsync(int skip, int take)
@@ -74,6 +84,11 @@ public class ToDoItemRepository : IToDoItemRepository
             .Take(take);
 
         return await query.ToListAsync();
+    }
+
+    public Task<ICollection<ToDoItem>> SelectOverdueItemsAsync()
+    {
+        throw new NotImplementedException();
     }
 
     public async Task<ToDoItem> SelectToDoItemByIdAsync(long id)
