@@ -12,6 +12,10 @@ public interface IToDoItemRepository
     Task<ICollection<ToDoItem>> SelectByDueDateAsync(DateTime dueDate);
     Task<ICollection<ToDoItem>> SelectCompletedAsync(int skip, int take);
     Task<ICollection<ToDoItem>> SelectIncompleteAsync(int skip, int take);
+    Task<ICollection<ToDoItem>> SearchToDoItemsAsync(string keyword);
+    Task<ICollection<ToDoItem>> SelectOverdueItemsAsync();
+    Task<ICollection<ToDoItem>> GetUpcomingDeadlinesAsync();
+
 }
 
 
