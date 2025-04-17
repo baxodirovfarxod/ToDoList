@@ -10,6 +10,7 @@ namespace ToDoList.Bll.Services
     {
         private readonly IToDoItemRepository _toDoItemRepository;
         private readonly IValidator<ToDoItemCreateDto> _toDoItemCreateDtoValidator;
+        private readonly IValidator<ToDoItemUpdateDto> _toDoItemUpdateDtoValidator;
         private readonly IMapper _mapper;
 
         public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator, IMapper mapper)
@@ -90,15 +91,13 @@ namespace ToDoList.Bll.Services
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
         {
-            var existingItem = await _toDoItemRepository.SelectToDoItemByIdAsync(newItem.ToDoItemId);
-            if (existingItem == null)
+            var validationResult = _toDoItemUpdateDtoValidator.Validate(newItem);
+            if (!validationResult.IsValid)
             {
-                throw new Exception($"ToDoItem with ID {newItem.ToDoItemId} not found.");
+                throw new ValidationException(validationResult.Errors);
             }
 
-            _mapper.Map<ToDoItem>(newItem);
-
-            await _toDoItemRepository.UpdateToDoItemAsync(existingItem);
+            await _toDoItemRepository.UpdateToDoItemAsync(_mapper.Map<ToDoItem>(newItem));
         }
     }
 }
