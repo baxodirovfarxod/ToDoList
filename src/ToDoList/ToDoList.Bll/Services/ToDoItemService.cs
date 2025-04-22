@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FluentValidation;
+using Microsoft.Extensions.Logging;
 using ToDoList.Bll.DTOs;
 using ToDoList.Dal.Entity;
 using ToDoList.Repository.ToDoItemRepository;
@@ -12,12 +13,14 @@ namespace ToDoList.Bll.Services
         private readonly IValidator<ToDoItemCreateDto> _toDoItemCreateDtoValidator;
         private readonly IValidator<ToDoItemUpdateDto> _toDoItemUpdateDtoValidator;
         private readonly IMapper _mapper;
+        private readonly ILogger<ToDoItemService> _logger;
 
-        public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator, IMapper mapper)
+        public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator, IMapper mapper, ILogger<ToDoItemService> logger)
         {
             _toDoItemRepository = toDoItemRepository;
             _toDoItemCreateDtoValidator = validator;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public async Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItem)
@@ -48,6 +51,7 @@ namespace ToDoList.Bll.Services
 
         public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
+            _logger.LogInformation($"GetAllToDoItemsAsync method worked : {DateTime.UtcNow}");
             var toDoItems = await _toDoItemRepository.SelectAllToDoItemsAsync(skip, take);
 
             var toDoItemDtos = toDoItems

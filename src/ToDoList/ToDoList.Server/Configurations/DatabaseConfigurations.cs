@@ -11,7 +11,13 @@ public static class DatabaseConfigurations
     {
         var connectionString = builder.Configuration.GetConnectionString("DatabaseConnection");
 
-        builder.Services.AddSingleton(new SqlDBConeectionString(connectionString));
+        var sqlDBConeectionString = new SqlDBConeectionString(connectionString);
+
+        builder.Services.AddSingleton<SqlDBConeectionString>(sqlDBConeectionString);
+        builder.Services.AddDbContext<MainContext>(options =>
+          options.UseSqlServer(connectionString));
+
+
         builder.Services.AddAutoMapper(typeof(MappingProFile));
     }
 }
