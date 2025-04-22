@@ -10,10 +10,12 @@ namespace ToDoList.Server.Controller
     public class ToDoListController : ControllerBase
     {
         private readonly IToDoItemService _toDoItemService;
+        private readonly ILogger<ToDoListController> _logger;
 
-        public ToDoListController(IToDoItemService toDoItemService)
+        public ToDoListController(IToDoItemService toDoItemService, ILogger<ToDoListController> logger)
         {
             _toDoItemService = toDoItemService;
+            _logger = logger;
         }
         [HttpPost("add")]
         public async Task<long> AddToDoItem(ToDoItemCreateDto toDoItemCreateDto)
@@ -37,6 +39,19 @@ namespace ToDoList.Server.Controller
         [HttpGet("getAll")]
         public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
+            _logger.LogInformation("GetAllToDoItemsAsync method worked");
+
+            try
+            {
+                var number = 45;
+                var res = number / 0;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+            }
+
+
             return await _toDoItemService.GetAllToDoItemsAsync(skip, take);
         }
 

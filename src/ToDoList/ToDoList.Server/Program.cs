@@ -1,5 +1,4 @@
-
-using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 using ToDoList.Server.Configurations;
 
 namespace ToDoList.Server
@@ -12,6 +11,8 @@ namespace ToDoList.Server
 
             // Add services to the container.
 
+
+            builder.ConfigureSerilog();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
