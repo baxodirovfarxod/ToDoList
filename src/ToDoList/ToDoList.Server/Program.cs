@@ -1,5 +1,6 @@
 using Serilog;
 using ToDoList.Server.Configurations;
+using ToDoList.Server.Filters;
 
 namespace ToDoList.Server
 {
@@ -11,9 +12,13 @@ namespace ToDoList.Server
 
             // Add services to the container.
 
-
             builder.ConfigureSerilog();
-            builder.Services.AddControllers();
+
+            builder.Services.AddControllers(options =>
+            {
+                options.Filters.Add<ApiExceptionFilterAttribute>();
+            });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
