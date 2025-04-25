@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ToDoList.Core\ToDoList.Core.csproj" />
     <ProjectReference Include="..\ToDoList.Repository\ToDoList.Repository.csproj" />
   </ItemGroup>
 

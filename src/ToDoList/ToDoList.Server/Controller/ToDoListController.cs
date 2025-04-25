@@ -19,7 +19,9 @@ namespace ToDoList.Server.Controller
         }
         [HttpPost("add")]
         public async Task<long> AddToDoItem(ToDoItemCreateDto toDoItemCreateDto)
-        { 
+        {
+            _logger.LogInformation("AddToDoItem method worked");
+
             var id = await _toDoItemService.AddToDoItemAsync(toDoItemCreateDto);
             return id;
         }
@@ -27,6 +29,8 @@ namespace ToDoList.Server.Controller
         [HttpDelete("delete")]
         public async Task DeleteToDoItemByIdAsync(long id)
         {
+            _logger.LogInformation("DeleteToDoItemByIdAsync method worked");
+            
             await _toDoItemService.DeleteToDoItemByIdAsync(id);
         }
 
@@ -39,18 +43,7 @@ namespace ToDoList.Server.Controller
         [HttpGet("getAll")]
         public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
-            _logger.LogInformation("GetAllToDoItemsAsync method worked");
-
-            try
-            {
-                var number = 45;
-                var res = number / 0;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, ex.Message);
-            }
-
+            _logger.LogInformation($"GetAllToDoItemsAsync method worked");
 
             return await _toDoItemService.GetAllToDoItemsAsync(skip, take);
         }
@@ -76,6 +69,8 @@ namespace ToDoList.Server.Controller
         [HttpPut("update")]
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto toDoItemUpdateDto)
         {
+            _logger.LogInformation("UpdateToDoItemAsync method worked");
+
             await _toDoItemService.UpdateToDoItemAsync(toDoItemUpdateDto);
         }
     }
