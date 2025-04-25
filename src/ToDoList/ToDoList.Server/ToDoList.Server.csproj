@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ToDoList.Bll\ToDoList.Bll.csproj" />
+    <ProjectReference Include="..\ToDoList.Core\ToDoList.Core.csproj" />
   </ItemGroup>
 
 </Project>

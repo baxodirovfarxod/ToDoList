@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace ProductProcessing.Errors;
+namespace ToDoList.Errors;
 
 public class ImageFileUnexpectedException : BaseException
 {

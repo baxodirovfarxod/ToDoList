@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using Microsoft.Extensions.Logging;
+using ToDoList.Errors;
 using ToDoList.Bll.DTOs;
 using ToDoList.Dal.Entity;
 using ToDoList.Repository.ToDoItemRepository;
@@ -14,6 +15,7 @@ namespace ToDoList.Bll.Services
         private readonly IValidator<ToDoItemUpdateDto> _toDoItemUpdateDtoValidator;
         private readonly IMapper _mapper;
         private readonly ILogger<ToDoItemService> _logger;
+        
 
         public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator, IMapper mapper, ILogger<ToDoItemService> logger)
         {
@@ -34,7 +36,6 @@ namespace ToDoList.Bll.Services
             ArgumentNullException.ThrowIfNull(toDoItem);
             var covert = _mapper.Map<ToDoItem>(toDoItem);
 
-
             var id = await _toDoItemRepository.InsertToDoItemAsync(covert);
             return id;
         }
@@ -44,14 +45,13 @@ namespace ToDoList.Bll.Services
             var item = await _toDoItemRepository.SelectToDoItemByIdAsync(id);
             if (item is null)
             {
-                throw new ArgumentNullException($"ToDoItem with id {id} not found.");
+                throw new NotFoundException($"ToDoItem with id {id} not found.");
             }
             await _toDoItemRepository.DeleteToDoItemByIdAsync(id);
         }
 
         public async Task<List<ToDoItemGetDto>> GetAllToDoItemsAsync(int skip, int take)
         {
-            _logger.LogInformation($"GetAllToDoItemsAsync method worked : {DateTime.UtcNow}");
             var toDoItems = await _toDoItemRepository.SelectAllToDoItemsAsync(skip, take);
 
             var toDoItemDtos = toDoItems
@@ -90,6 +90,10 @@ namespace ToDoList.Bll.Services
         public async Task<ToDoItemGetDto> GetToDoItemByIdAsync(long id)
         {
             var founded = await _toDoItemRepository.SelectToDoItemByIdAsync(id);
+            if (founded == null)
+            {
+                throw new NotFoundException($"ToDoItem with id {id} not found.");
+            }
             return _mapper.Map<ToDoItemGetDto>(founded);
         }
 
