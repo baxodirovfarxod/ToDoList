@@ -25,6 +25,17 @@ namespace ToDoList.Server
             builder.Configure();
             builder.Configuration();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -37,6 +48,8 @@ namespace ToDoList.Server
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            app.UseCors("AllowAll");
 
 
             app.MapControllers();

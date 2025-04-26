@@ -1,0 +1,496 @@
+2025-04-26 07:52:22.795 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-04-26 07:52:22.930 +05:00 [DBG] Hosting starting
+2025-04-26 07:52:23.160 +05:00 [DBG] Connection id "0HNC4DLFB6JLJ" received FIN.
+2025-04-26 07:52:23.173 +05:00 [DBG] Connection id "0HNC4DLFB6JLJ" accepted.
+2025-04-26 07:52:23.174 +05:00 [DBG] Connection id "0HNC4DLFB6JLJ" started.
+2025-04-26 07:52:23.178 +05:00 [INF] Now listening on: http://localhost:5195
+2025-04-26 07:52:23.178 +05:00 [DBG] Loaded hosting startup assembly ToDoList.Server
+2025-04-26 07:52:23.179 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-04-26 07:52:23.179 +05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-04-26 07:52:23.179 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-04-26 07:52:23.193 +05:00 [DBG] Connection id "0HNC4DLFB6JLJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-26 07:52:23.196 +05:00 [DBG] Connection id "0HNC4DLFB6JLJ" disconnecting.
+2025-04-26 07:52:23.201 +05:00 [DBG] Connection id "0HNC4DLFB6JLJ" stopped.
+2025-04-26 07:52:23.311 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-26 07:52:23.311 +05:00 [INF] Hosting environment: Development
+2025-04-26 07:52:23.311 +05:00 [INF] Content root path: D:\C#\ToDoList\src\ToDoList\ToDoList.Server
+2025-04-26 07:52:23.312 +05:00 [DBG] Hosting started
+2025-04-26 07:52:23.764 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" accepted.
+2025-04-26 07:52:23.764 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" started.
+2025-04-26 07:52:23.765 +05:00 [DBG] Connection id "0HNC4DLFB6JLL" accepted.
+2025-04-26 07:52:23.765 +05:00 [DBG] Connection id "0HNC4DLFB6JLL" started.
+2025-04-26 07:52:23.815 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5195/swagger/index.html - null null
+2025-04-26 07:52:23.984 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-04-26 07:52:24.007 +05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-04-26 07:52:24.008 +05:00 [DBG] Request did not match any endpoints
+2025-04-26 07:52:24.096 +05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-04-26 07:52:24.098 +05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-04-26 07:52:24.143 +05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2025-04-26 07:52:24.144 +05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-04-26 07:52:24.145 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" completed keep alive response.
+2025-04-26 07:52:24.158 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5195/swagger/index.html - 200 null text/html;charset=utf-8 353.818ms
+2025-04-26 07:52:24.195 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5195/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-26 07:52:24.199 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" completed keep alive response.
+2025-04-26 07:52:24.199 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5195/_framework/aspnetcore-browser-refresh.js - 200 13765 application/javascript; charset=utf-8 3.8962ms
+2025-04-26 07:52:24.309 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5195/_vs/browserLink - null null
+2025-04-26 07:52:24.369 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" completed keep alive response.
+2025-04-26 07:52:24.369 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5195/_vs/browserLink - 200 null text/javascript; charset=UTF-8 60.2332ms
+2025-04-26 07:52:24.400 +05:00 [DBG] Connection id "0HNC4DLFB6JLL" received FIN.
+2025-04-26 07:52:24.400 +05:00 [DBG] Connection id "0HNC4DLFB6JLL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-26 07:52:24.401 +05:00 [DBG] Connection id "0HNC4DLFB6JLL" disconnecting.
+2025-04-26 07:52:24.402 +05:00 [DBG] Connection id "0HNC4DLFB6JLL" stopped.
+2025-04-26 07:52:24.469 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5195/swagger/v1/swagger.json - null null
+2025-04-26 07:52:24.469 +05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-04-26 07:52:24.469 +05:00 [DBG] Request did not match any endpoints
+2025-04-26 07:52:24.563 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" completed keep alive response.
+2025-04-26 07:52:24.564 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5195/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 94.8253ms
+2025-04-26 07:52:35.212 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" received FIN.
+2025-04-26 07:52:35.213 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-26 07:52:35.213 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" disconnecting.
+2025-04-26 07:52:35.225 +05:00 [DBG] Connection id "0HNC4DLFB6JLK" stopped.
+2025-04-26 07:52:40.855 +05:00 [DBG] Connection id "0HNC4DLFB6JLM" accepted.
+2025-04-26 07:52:40.856 +05:00 [DBG] Connection id "0HNC4DLFB6JLM" started.
+2025-04-26 07:52:40.857 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/toDoList/getAll?skip=0&take=100 - null null
+2025-04-26 07:52:40.864 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/getAll'
+2025-04-26 07:52:40.871 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server)' with route pattern 'api/toDoList/getAll' is valid for the request path '/api/toDoList/getAll'
+2025-04-26 07:52:40.872 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server)'
+2025-04-26 07:52:40.877 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-26 07:52:40.878 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-04-26 07:52:40.884 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server)'
+2025-04-26 07:52:40.937 +05:00 [INF] Route matched with {action = "GetAllToDoItems", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ToDoList.Bll.DTOs.ToDoItemGetDto]] GetAllToDoItemsAsync(Int32, Int32) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-26 07:52:40.938 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-26 07:52:40.939 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-26 07:52:40.939 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-26 07:52:40.939 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-26 07:52:40.939 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-26 07:52:40.942 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-26 07:52:41.126 +05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-04-26 07:52:41.275 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-26 07:52:41.293 +05:00 [DBG] Attempting to bind parameter 'skip' of type 'System.Int32' ...
+2025-04-26 07:52:41.296 +05:00 [DBG] Attempting to bind parameter 'skip' of type 'System.Int32' using the name 'skip' in request data ...
+2025-04-26 07:52:41.299 +05:00 [DBG] Done attempting to bind parameter 'skip' of type 'System.Int32'.
+2025-04-26 07:52:41.299 +05:00 [DBG] Done attempting to bind parameter 'skip' of type 'System.Int32'.
+2025-04-26 07:52:41.299 +05:00 [DBG] Attempting to validate the bound parameter 'skip' of type 'System.Int32' ...
+2025-04-26 07:52:41.302 +05:00 [DBG] Done attempting to validate the bound parameter 'skip' of type 'System.Int32'.
+2025-04-26 07:52:41.304 +05:00 [DBG] Attempting to bind parameter 'take' of type 'System.Int32' ...
+2025-04-26 07:52:41.305 +05:00 [DBG] Attempting to bind parameter 'take' of type 'System.Int32' using the name 'take' in request data ...
+2025-04-26 07:52:41.305 +05:00 [DBG] Done attempting to bind parameter 'take' of type 'System.Int32'.
+2025-04-26 07:52:41.305 +05:00 [DBG] Done attempting to bind parameter 'take' of type 'System.Int32'.
+2025-04-26 07:52:41.305 +05:00 [DBG] Attempting to validate the bound parameter 'take' of type 'System.Int32' ...
+2025-04-26 07:52:41.306 +05:00 [DBG] Done attempting to validate the bound parameter 'take' of type 'System.Int32'.
+2025-04-26 07:52:41.309 +05:00 [INF] GetAllToDoItemsAsync method worked
+2025-04-26 07:52:41.933 +05:00 [DBG] Entity Framework Core 9.0.4 initialized 'MainContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.4' with options: EngineType=SqlServer 
+2025-04-26 07:52:41.978 +05:00 [DBG] Compiling query expression: 
+'DbSet<ToDoItem>()
+    .Skip(__p_0)
+    .Take(__p_1)'
+2025-04-26 07:52:42.164 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 07:52:42.165 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-04-26 07:52:42.310 +05:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<ToDoItem>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ToDoItem.ToDoItemId (long) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ToDoItem.CreatedAt (DateTime) Required, 1], [Property: ToDoItem.Description (string) Required MaxLength(251), 2], [Property: ToDoItem.DueDate (DateTime) Required, 3], [Property: ToDoItem.IsCompleted (bool) Required, 4], [Property: ToDoItem.Title (string) Required MaxLength(100), 5] }
+        SELECT t.ToDoItemId, t.CreatedAt, t.Description, t.DueDate, t.IsCompleted, t.Title
+        FROM ToDoItems AS t
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ToDoItem.ToDoItemId (long) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ToDoItem.CreatedAt (DateTime) Required, 1], [Property: ToDoItem.Description (string) Required MaxLength(251), 2], [Property: ToDoItem.DueDate (DateTime) Required, 3], [Property: ToDoItem.IsCompleted (bool) Required, 4], [Property: ToDoItem.Title (string) Required MaxLength(100), 5] }
+        SELECT t.ToDoItemId, t.CreatedAt, t.Description, t.DueDate, t.IsCompleted, t.Title
+        FROM ToDoItems AS t
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        ToDoItem entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            ToDoItem instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(ToDoItem);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: ToDoItem.ToDoItemId PK | Resolver: c => c.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt64(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (ToDoItem)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")]: 
+                        {
+                            return 
+                            {
+                                ToDoItem instance;
+                                instance = new ToDoItem();
+                                instance.<ToDoItemId>k__BackingField = dataReader.GetInt64(0);
+                                instance.<CreatedAt>k__BackingField = dataReader.GetDateTime(1);
+                                instance.<Description>k__BackingField = dataReader.GetString(2);
+                                instance.<DueDate>k__BackingField = dataReader.GetDateTime(3);
+                                instance.<IsCompleted>k__BackingField = dataReader.GetBoolean(4);
+                                instance.<Title>k__BackingField = dataReader.GetString(5);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(ToDoItem)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: ToDoList.Dal.MainContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2025-04-26 07:52:42.361 +05:00 [DBG] Creating DbConnection.
+2025-04-26 07:52:42.366 +05:00 [DBG] Created DbConnection. (5ms).
+2025-04-26 07:52:42.370 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:42.397 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:42.405 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-26 07:52:42.417 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2025-04-26 07:52:42.424 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (21ms).
+2025-04-26 07:52:42.435 +05:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-04-26 07:52:42.507 +05:00 [INF] Executed DbCommand (68ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-04-26 07:52:42.567 +05:00 [DBG] Context 'MainContext' started tracking 'ToDoItem' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-04-26 07:52:42.603 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:42.610 +05:00 [DBG] A data reader for 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' is being disposed after spending 97ms reading results.
+2025-04-26 07:52:42.613 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:42.615 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' (1ms).
+2025-04-26 07:52:42.630 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-04-26 07:52:42.633 +05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2025-04-26 07:52:42.634 +05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2025-04-26 07:52:42.634 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-04-26 07:52:42.634 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-04-26 07:52:42.635 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-04-26 07:52:42.636 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoList.Bll.DTOs.ToDoItemGetDto, ToDoList.Bll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-26 07:52:42.658 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server) in 1713.7219ms
+2025-04-26 07:52:42.659 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server)'
+2025-04-26 07:52:42.661 +05:00 [DBG] Connection id "0HNC4DLFB6JLM" completed keep alive response.
+2025-04-26 07:52:42.663 +05:00 [DBG] 'MainContext' disposed.
+2025-04-26 07:52:42.667 +05:00 [DBG] Disposing connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:42.668 +05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2025-04-26 07:52:42.669 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/toDoList/getAll?skip=0&take=100 - 200 null application/json; charset=utf-8 1812.072ms
+2025-04-26 07:52:45.225 +05:00 [DBG] Connection id "0HNC4DLFB6JLM" received FIN.
+2025-04-26 07:52:45.225 +05:00 [DBG] Connection id "0HNC4DLFB6JLM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-26 07:52:45.226 +05:00 [DBG] Connection id "0HNC4DLFB6JLM" disconnecting.
+2025-04-26 07:52:45.226 +05:00 [DBG] Connection id "0HNC4DLFB6JLM" stopped.
+2025-04-26 07:52:54.317 +05:00 [DBG] Connection id "0HNC4DLFB6JLN" accepted.
+2025-04-26 07:52:54.317 +05:00 [DBG] Connection id "0HNC4DLFB6JLN" started.
+2025-04-26 07:52:54.318 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5195/api/toDoList/delete?id=6 - null null
+2025-04-26 07:52:54.320 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/delete'
+2025-04-26 07:52:54.320 +05:00 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-04-26 07:52:54.320 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-26 07:52:54.322 +05:00 [DBG] The request has an origin header: 'http://127.0.0.1:5500'.
+2025-04-26 07:52:54.323 +05:00 [INF] CORS policy execution successful.
+2025-04-26 07:52:54.324 +05:00 [DBG] The request is a preflight request.
+2025-04-26 07:52:54.325 +05:00 [DBG] Connection id "0HNC4DLFB6JLN" completed keep alive response.
+2025-04-26 07:52:54.326 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5195/api/toDoList/delete?id=6 - 204 null null 7.6917ms
+2025-04-26 07:52:54.329 +05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5195/api/toDoList/delete?id=6 - null null
+2025-04-26 07:52:54.329 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/delete'
+2025-04-26 07:52:54.329 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)' with route pattern 'api/toDoList/delete' is valid for the request path '/api/toDoList/delete'
+2025-04-26 07:52:54.329 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-26 07:52:54.330 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-26 07:52:54.330 +05:00 [DBG] The request has an origin header: 'http://127.0.0.1:5500'.
+2025-04-26 07:52:54.330 +05:00 [INF] CORS policy execution successful.
+2025-04-26 07:52:54.331 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-26 07:52:54.336 +05:00 [INF] Route matched with {action = "DeleteToDoItemById", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task DeleteToDoItemByIdAsync(Int64) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-26 07:52:54.336 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-26 07:52:54.336 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-26 07:52:54.337 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-26 07:52:54.337 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-26 07:52:54.337 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-26 07:52:54.337 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-26 07:52:54.339 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-26 07:52:54.340 +05:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int64' ...
+2025-04-26 07:52:54.340 +05:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int64' using the name 'id' in request data ...
+2025-04-26 07:52:54.340 +05:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int64'.
+2025-04-26 07:52:54.341 +05:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int64'.
+2025-04-26 07:52:54.341 +05:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int64' ...
+2025-04-26 07:52:54.341 +05:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int64'.
+2025-04-26 07:52:54.342 +05:00 [INF] DeleteToDoItemByIdAsync method worked
+2025-04-26 07:52:54.377 +05:00 [DBG] Entity Framework Core 9.0.4 initialized 'MainContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.4' with options: EngineType=SqlServer 
+2025-04-26 07:52:54.384 +05:00 [DBG] Compiling query expression: 
+'DbSet<ToDoItem>()
+    .FirstOrDefault(x => x.ToDoItemId == __id_0)'
+2025-04-26 07:52:54.412 +05:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<ToDoItem>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<ToDoItem>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ToDoItem.ToDoItemId (long) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ToDoItem.CreatedAt (DateTime) Required, 1], [Property: ToDoItem.Description (string) Required MaxLength(251), 2], [Property: ToDoItem.DueDate (DateTime) Required, 3], [Property: ToDoItem.IsCompleted (bool) Required, 4], [Property: ToDoItem.Title (string) Required MaxLength(100), 5] }
+            SELECT TOP(1) t.ToDoItemId, t.CreatedAt, t.Description, t.DueDate, t.IsCompleted, t.Title
+            FROM ToDoItems AS t
+            WHERE t.ToDoItemId == @__id_0) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ToDoItem.ToDoItemId (long) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ToDoItem.CreatedAt (DateTime) Required, 1], [Property: ToDoItem.Description (string) Required MaxLength(251), 2], [Property: ToDoItem.DueDate (DateTime) Required, 3], [Property: ToDoItem.IsCompleted (bool) Required, 4], [Property: ToDoItem.Title (string) Required MaxLength(100), 5] }
+            SELECT TOP(1) t.ToDoItemId, t.CreatedAt, t.Description, t.DueDate, t.IsCompleted, t.Title
+            FROM ToDoItems AS t
+            WHERE t.ToDoItemId == @__id_0, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            ToDoItem entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                ToDoItem instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(ToDoItem);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: ToDoItem.ToDoItemId PK | Resolver: c => c.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt64(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (ToDoItem)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")]: 
+                            {
+                                return 
+                                {
+                                    ToDoItem instance;
+                                    instance = new ToDoItem();
+                                    instance.<ToDoItemId>k__BackingField = dataReader.GetInt64(0);
+                                    instance.<CreatedAt>k__BackingField = dataReader.GetDateTime(1);
+                                    instance.<Description>k__BackingField = dataReader.GetString(2);
+                                    instance.<DueDate>k__BackingField = dataReader.GetDateTime(3);
+                                    instance.<IsCompleted>k__BackingField = dataReader.GetBoolean(4);
+                                    instance.<Title>k__BackingField = dataReader.GetString(5);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(ToDoItem)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: ToDoList.Dal.MainContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-04-26 07:52:54.421 +05:00 [DBG] Creating DbConnection.
+2025-04-26 07:52:54.421 +05:00 [DBG] Created DbConnection. (0ms).
+2025-04-26 07:52:54.421 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.421 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.422 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-26 07:52:54.422 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-04-26 07:52:54.422 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-04-26 07:52:54.423 +05:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-26 07:52:54.425 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-26 07:52:54.427 +05:00 [DBG] Context 'MainContext' started tracking 'ToDoItem' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-04-26 07:52:54.429 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.429 +05:00 [DBG] A data reader for 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' is being disposed after spending 3ms reading results.
+2025-04-26 07:52:54.430 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.430 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' (0ms).
+2025-04-26 07:52:54.437 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.437 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.437 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-26 07:52:54.437 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-04-26 07:52:54.438 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-04-26 07:52:54.438 +05:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-26 07:52:54.440 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-26 07:52:54.442 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.442 +05:00 [DBG] A data reader for 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' is being disposed after spending 2ms reading results.
+2025-04-26 07:52:54.442 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.442 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' (0ms).
+2025-04-26 07:52:54.457 +05:00 [DBG] An entity of type 'ToDoItem' tracked by 'MainContext' changed state from '"Unchanged"' to '"Deleted"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-04-26 07:52:54.461 +05:00 [DBG] SaveChanges starting for 'MainContext'.
+2025-04-26 07:52:54.463 +05:00 [DBG] DetectChanges starting for 'MainContext'.
+2025-04-26 07:52:54.485 +05:00 [DBG] DetectChanges completed for 'MainContext'.
+2025-04-26 07:52:54.554 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.554 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.557 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-26 07:52:54.558 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-04-26 07:52:54.558 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-04-26 07:52:54.558 +05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [ToDoItems]
+OUTPUT 1
+WHERE [ToDoItemId] = @p0;
+2025-04-26 07:52:54.561 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [ToDoItems]
+OUTPUT 1
+WHERE [ToDoItemId] = @p0;
+2025-04-26 07:52:54.568 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.568 +05:00 [DBG] A data reader for 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' is being disposed after spending 7ms reading results.
+2025-04-26 07:52:54.569 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.570 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' (0ms).
+2025-04-26 07:52:54.577 +05:00 [DBG] An entity of type 'ToDoItem' tracked by 'MainContext' changed state from '"Deleted"' to '"Detached"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-04-26 07:52:54.580 +05:00 [DBG] SaveChanges completed for 'MainContext' with 1 entities written to the database.
+2025-04-26 07:52:54.581 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server) in 243.7209ms
+2025-04-26 07:52:54.581 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-26 07:52:54.582 +05:00 [DBG] Connection id "0HNC4DLFB6JLN" completed keep alive response.
+2025-04-26 07:52:54.582 +05:00 [DBG] 'MainContext' disposed.
+2025-04-26 07:52:54.582 +05:00 [DBG] Disposing connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:52:54.582 +05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2025-04-26 07:52:54.582 +05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5195/api/toDoList/delete?id=6 - 200 0 null 253.3452ms
+2025-04-26 07:52:55.241 +05:00 [DBG] Connection id "0HNC4DLFB6JLN" received FIN.
+2025-04-26 07:52:55.242 +05:00 [DBG] Connection id "0HNC4DLFB6JLN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-26 07:52:55.243 +05:00 [DBG] Connection id "0HNC4DLFB6JLN" disconnecting.
+2025-04-26 07:52:55.243 +05:00 [DBG] Connection id "0HNC4DLFB6JLN" stopped.
+2025-04-26 07:53:01.253 +05:00 [DBG] Connection id "0HNC4DLFB6JLO" accepted.
+2025-04-26 07:53:01.253 +05:00 [DBG] Connection id "0HNC4DLFB6JLO" started.
+2025-04-26 07:53:01.254 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/toDoList/getAll?skip=0&take=100 - null null
+2025-04-26 07:53:01.254 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/getAll'
+2025-04-26 07:53:01.254 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server)' with route pattern 'api/toDoList/getAll' is valid for the request path '/api/toDoList/getAll'
+2025-04-26 07:53:01.254 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server)'
+2025-04-26 07:53:01.255 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-26 07:53:01.255 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server)'
+2025-04-26 07:53:01.256 +05:00 [INF] Route matched with {action = "GetAllToDoItems", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ToDoList.Bll.DTOs.ToDoItemGetDto]] GetAllToDoItemsAsync(Int32, Int32) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-26 07:53:01.256 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-26 07:53:01.256 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-26 07:53:01.256 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-26 07:53:01.256 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-26 07:53:01.256 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-26 07:53:01.256 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-26 07:53:01.264 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-26 07:53:01.264 +05:00 [DBG] Attempting to bind parameter 'skip' of type 'System.Int32' ...
+2025-04-26 07:53:01.264 +05:00 [DBG] Attempting to bind parameter 'skip' of type 'System.Int32' using the name 'skip' in request data ...
+2025-04-26 07:53:01.264 +05:00 [DBG] Done attempting to bind parameter 'skip' of type 'System.Int32'.
+2025-04-26 07:53:01.264 +05:00 [DBG] Done attempting to bind parameter 'skip' of type 'System.Int32'.
+2025-04-26 07:53:01.265 +05:00 [DBG] Attempting to validate the bound parameter 'skip' of type 'System.Int32' ...
+2025-04-26 07:53:01.265 +05:00 [DBG] Done attempting to validate the bound parameter 'skip' of type 'System.Int32'.
+2025-04-26 07:53:01.265 +05:00 [DBG] Attempting to bind parameter 'take' of type 'System.Int32' ...
+2025-04-26 07:53:01.265 +05:00 [DBG] Attempting to bind parameter 'take' of type 'System.Int32' using the name 'take' in request data ...
+2025-04-26 07:53:01.265 +05:00 [DBG] Done attempting to bind parameter 'take' of type 'System.Int32'.
+2025-04-26 07:53:01.265 +05:00 [DBG] Done attempting to bind parameter 'take' of type 'System.Int32'.
+2025-04-26 07:53:01.265 +05:00 [DBG] Attempting to validate the bound parameter 'take' of type 'System.Int32' ...
+2025-04-26 07:53:01.265 +05:00 [DBG] Done attempting to validate the bound parameter 'take' of type 'System.Int32'.
+2025-04-26 07:53:01.266 +05:00 [INF] GetAllToDoItemsAsync method worked
+2025-04-26 07:53:01.331 +05:00 [DBG] Entity Framework Core 9.0.4 initialized 'MainContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.4' with options: EngineType=SqlServer 
+2025-04-26 07:53:01.333 +05:00 [DBG] Creating DbConnection.
+2025-04-26 07:53:01.333 +05:00 [DBG] Created DbConnection. (0ms).
+2025-04-26 07:53:01.333 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:53:01.334 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:53:01.334 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-26 07:53:01.334 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-04-26 07:53:01.334 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-04-26 07:53:01.334 +05:00 [DBG] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-04-26 07:53:01.337 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2025-04-26 07:53:01.338 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:53:01.338 +05:00 [DBG] A data reader for 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2025-04-26 07:53:01.338 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:53:01.338 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS' (0ms).
+2025-04-26 07:53:01.339 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-04-26 07:53:01.339 +05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2025-04-26 07:53:01.339 +05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2025-04-26 07:53:01.339 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-04-26 07:53:01.339 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-04-26 07:53:01.339 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-04-26 07:53:01.339 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoList.Bll.DTOs.ToDoItemGetDto, ToDoList.Bll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-26 07:53:01.339 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server) in 83.1803ms
+2025-04-26 07:53:01.340 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.GetAllToDoItemsAsync (ToDoList.Server)'
+2025-04-26 07:53:01.340 +05:00 [DBG] Connection id "0HNC4DLFB6JLO" completed keep alive response.
+2025-04-26 07:53:01.340 +05:00 [DBG] 'MainContext' disposed.
+2025-04-26 07:53:01.340 +05:00 [DBG] Disposing connection to database 'ToDoList' on server 'WIN-BNO54FDBS2G\SQLEXPRESS'.
+2025-04-26 07:53:01.340 +05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2025-04-26 07:53:01.340 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/toDoList/getAll?skip=0&take=100 - 200 null application/json; charset=utf-8 86.3423ms
+2025-04-26 07:53:05.256 +05:00 [DBG] Connection id "0HNC4DLFB6JLO" received FIN.
+2025-04-26 07:53:05.257 +05:00 [DBG] Connection id "0HNC4DLFB6JLO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-26 07:53:05.257 +05:00 [DBG] Connection id "0HNC4DLFB6JLO" disconnecting.
+2025-04-26 07:53:05.257 +05:00 [DBG] Connection id "0HNC4DLFB6JLO" stopped.
