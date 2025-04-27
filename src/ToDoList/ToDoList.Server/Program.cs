@@ -1,6 +1,7 @@
 using Serilog;
 using ToDoList.Server.Configurations;
 using ToDoList.Server.Filters;
+using ToDoList.Server.Middlewares;
 
 namespace ToDoList.Server
 {
@@ -37,6 +38,14 @@ namespace ToDoList.Server
 
 
             var app = builder.Build();
+
+            app.UseMiddleware<RequestDurationMiddleware>();
+
+            //app.Use(async (context, next) =>
+            //{
+
+            //    await next();
+            //});
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
