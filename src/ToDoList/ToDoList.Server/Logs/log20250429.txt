@@ -1,0 +1,768 @@
+2025-04-29 11:17:57.588 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-04-29 11:17:57.724 +05:00 [DBG] Hosting starting
+2025-04-29 11:17:57.741 +05:00 [DBG] Middleware loaded
+2025-04-29 11:17:57.742 +05:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16515 B).
+2025-04-29 11:17:57.743 +05:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-04-29 11:17:57.884 +05:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-04-29 11:17:58.009 +05:00 [INF] Now listening on: https://localhost:7088
+2025-04-29 11:17:58.009 +05:00 [INF] Now listening on: http://localhost:5195
+2025-04-29 11:17:58.009 +05:00 [DBG] Loaded hosting startup assembly ToDoList.Server
+2025-04-29 11:17:58.009 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-04-29 11:17:58.009 +05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-04-29 11:17:58.009 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-04-29 11:17:58.139 +05:00 [DBG] Connection id "0HNC6SMB2HSCH" accepted.
+2025-04-29 11:17:58.141 +05:00 [DBG] Connection id "0HNC6SMB2HSCH" started.
+2025-04-29 11:17:58.144 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 11:17:58.144 +05:00 [INF] Hosting environment: Development
+2025-04-29 11:17:58.144 +05:00 [INF] Content root path: C:\Users\WINDOWS 11\source\repos\ToDoList.git\src\ToDoList\ToDoList.Server
+2025-04-29 11:17:58.144 +05:00 [DBG] Hosting started
+2025-04-29 11:17:58.159 +05:00 [DBG] Connection id "0HNC6SMB2HSCH" received FIN.
+2025-04-29 11:17:58.184 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-04-29 11:17:58.205 +05:00 [DBG] Connection id "0HNC6SMB2HSCH" stopped.
+2025-04-29 11:17:58.215 +05:00 [DBG] Connection id "0HNC6SMB2HSCH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:18:01.218 +05:00 [DBG] Connection id "0HNC6SMB2HSCI" accepted.
+2025-04-29 11:18:01.219 +05:00 [DBG] Connection id "0HNC6SMB2HSCI" started.
+2025-04-29 11:18:01.324 +05:00 [DBG] Connection 0HNC6SMB2HSCI established using the following protocol: "Tls13"
+2025-04-29 11:18:01.392 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/swagger/index.html - null null
+2025-04-29 11:18:01.571 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-04-29 11:18:01.584 +05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-04-29 11:18:01.585 +05:00 [DBG] Request did not match any endpoints
+2025-04-29 11:18:01.635 +05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-04-29 11:18:01.636 +05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-04-29 11:18:01.656 +05:00 [INF] Request to /swagger/index.html took 0.062 seconds with status code 200
+2025-04-29 11:18:01.657 +05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2025-04-29 11:18:01.658 +05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-04-29 11:18:01.663 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/swagger/index.html - 200 null text/html;charset=utf-8 279.1848ms
+2025-04-29 11:18:01.675 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-29 11:18:01.675 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/_vs/browserLink - null null
+2025-04-29 11:18:01.681 +05:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-04-29 11:18:01.683 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 8.7451ms
+2025-04-29 11:18:01.766 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.6692ms
+2025-04-29 11:18:01.809 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/swagger/v1/swagger.json - null null
+2025-04-29 11:18:01.810 +05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-04-29 11:18:01.810 +05:00 [DBG] Request did not match any endpoints
+2025-04-29 11:18:01.825 +05:00 [INF] Request to /swagger/v1/swagger.json took 0.014 seconds with status code 200
+2025-04-29 11:18:01.831 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.4788ms
+2025-04-29 11:18:56.189 +05:00 [DBG] Connection id "0HNC6SMB2HSCI" received FIN.
+2025-04-29 11:18:56.239 +05:00 [DBG] The connection queue processing loop for 0HNC6SMB2HSCI completed.
+2025-04-29 11:18:56.245 +05:00 [DBG] Connection id "0HNC6SMB2HSCI" is closed. The last processed stream ID was 7.
+2025-04-29 11:18:56.246 +05:00 [DBG] Connection id "0HNC6SMB2HSCI" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:18:56.250 +05:00 [DBG] Connection id "0HNC6SMB2HSCI" stopped.
+2025-04-29 11:20:50.796 +05:00 [DBG] Connection id "0HNC6SMB2HSCJ" accepted.
+2025-04-29 11:20:50.800 +05:00 [DBG] Connection id "0HNC6SMB2HSCJ" started.
+2025-04-29 11:20:50.823 +05:00 [DBG] Connection 0HNC6SMB2HSCJ established using the following protocol: "Tls13"
+2025-04-29 11:20:50.828 +05:00 [INF] Request starting HTTP/2 DELETE https://localhost:7088/api/toDoList/delete?id=34 - null null
+2025-04-29 11:20:50.855 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/delete'
+2025-04-29 11:20:50.868 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)' with route pattern 'api/toDoList/delete' is valid for the request path '/api/toDoList/delete'
+2025-04-29 11:20:50.869 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-29 11:20:50.881 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:20:50.888 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:20:50.889 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:20:50.892 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-29 11:20:50.961 +05:00 [INF] Route matched with {action = "DeleteToDoItemById", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task DeleteToDoItemByIdAsync(Int64) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:20:50.964 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:20:50.964 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:20:50.965 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:20:50.965 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:20:50.966 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:20:50.969 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:20:51.321 +05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-04-29 11:20:51.580 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:20:51.616 +05:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int64' ...
+2025-04-29 11:20:51.621 +05:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int64' using the name 'id' in request data ...
+2025-04-29 11:20:51.624 +05:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int64'.
+2025-04-29 11:20:51.625 +05:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int64'.
+2025-04-29 11:20:51.625 +05:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int64' ...
+2025-04-29 11:20:51.630 +05:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int64'.
+2025-04-29 11:20:51.635 +05:00 [INF] DeleteToDoItemByIdAsync method worked
+2025-04-29 11:20:53.728 +05:00 [DBG] Entity Framework Core 9.0.4 initialized 'MainContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.4' with options: EngineType=SqlServer 
+2025-04-29 11:20:53.825 +05:00 [DBG] Compiling query expression: 
+'DbSet<ToDoItem>()
+    .FirstOrDefault(x => x.ToDoItemId == __id_0)'
+2025-04-29 11:20:54.397 +05:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<ToDoItem>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<ToDoItem>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ToDoItem.ToDoItemId (long) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ToDoItem.CreatedAt (DateTime) Required, 1], [Property: ToDoItem.Description (string) Required MaxLength(251), 2], [Property: ToDoItem.DueDate (DateTime) Required, 3], [Property: ToDoItem.IsCompleted (bool) Required, 4], [Property: ToDoItem.Title (string) Required MaxLength(100), 5] }
+            SELECT TOP(1) t.ToDoItemId, t.CreatedAt, t.Description, t.DueDate, t.IsCompleted, t.Title
+            FROM ToDoItems AS t
+            WHERE t.ToDoItemId == @__id_0) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ToDoItem.ToDoItemId (long) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ToDoItem.CreatedAt (DateTime) Required, 1], [Property: ToDoItem.Description (string) Required MaxLength(251), 2], [Property: ToDoItem.DueDate (DateTime) Required, 3], [Property: ToDoItem.IsCompleted (bool) Required, 4], [Property: ToDoItem.Title (string) Required MaxLength(100), 5] }
+            SELECT TOP(1) t.ToDoItemId, t.CreatedAt, t.Description, t.DueDate, t.IsCompleted, t.Title
+            FROM ToDoItems AS t
+            WHERE t.ToDoItemId == @__id_0, 
+            False, 
+            new HashSet<string>(
+                new string[]{ }, 
+                StringComparer.Ordinal
+            )
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            ToDoItem entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                ToDoItem instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(ToDoItem);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: ToDoItem.ToDoItemId PK | Resolver: c => c.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetInt64(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (ToDoItem)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")]: 
+                            {
+                                return 
+                                {
+                                    ToDoItem instance;
+                                    instance = new ToDoItem();
+                                    instance.<ToDoItemId>k__BackingField = dataReader.GetInt64(0);
+                                    instance.<CreatedAt>k__BackingField = dataReader.GetDateTime(1);
+                                    instance.<Description>k__BackingField = dataReader.GetString(2);
+                                    instance.<DueDate>k__BackingField = dataReader.GetDateTime(3);
+                                    instance.<IsCompleted>k__BackingField = dataReader.GetBoolean(4);
+                                    instance.<Title>k__BackingField = dataReader.GetString(5);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: ToDoItem | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("ToDoList.Dal.Entity.ToDoItem")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(ToDoItem)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: ToDoList.Dal.MainContext, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2025-04-29 11:20:54.487 +05:00 [DBG] Creating DbConnection.
+2025-04-29 11:20:54.497 +05:00 [DBG] Created DbConnection. (5ms).
+2025-04-29 11:20:54.502 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:54.539 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:54.549 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-29 11:20:54.556 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (6ms).
+2025-04-29 11:20:54.568 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (20ms).
+2025-04-29 11:20:54.591 +05:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-29 11:20:54.677 +05:00 [INF] Executed DbCommand (94ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-29 11:20:54.751 +05:00 [DBG] Context 'MainContext' started tracking 'ToDoItem' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-04-29 11:20:54.812 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:54.825 +05:00 [DBG] A data reader for 'ToDoList' on server 'localhost\SQLEXPRESS' is being disposed after spending 137ms reading results.
+2025-04-29 11:20:54.830 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:54.833 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'localhost\SQLEXPRESS' (2ms).
+2025-04-29 11:20:54.842 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:54.843 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:54.844 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-29 11:20:54.844 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-04-29 11:20:54.845 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2025-04-29 11:20:54.846 +05:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-29 11:20:54.853 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-29 11:20:54.858 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:54.859 +05:00 [DBG] A data reader for 'ToDoList' on server 'localhost\SQLEXPRESS' is being disposed after spending 5ms reading results.
+2025-04-29 11:20:54.860 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:54.860 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'localhost\SQLEXPRESS' (0ms).
+2025-04-29 11:20:54.886 +05:00 [DBG] An entity of type 'ToDoItem' tracked by 'MainContext' changed state from '"Unchanged"' to '"Deleted"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-04-29 11:20:54.895 +05:00 [DBG] SaveChanges starting for 'MainContext'.
+2025-04-29 11:20:54.902 +05:00 [DBG] DetectChanges starting for 'MainContext'.
+2025-04-29 11:20:54.937 +05:00 [DBG] DetectChanges completed for 'MainContext'.
+2025-04-29 11:20:55.048 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:55.048 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:55.054 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-29 11:20:55.055 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-04-29 11:20:55.055 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2025-04-29 11:20:55.056 +05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [ToDoItems]
+OUTPUT 1
+WHERE [ToDoItemId] = @p0;
+2025-04-29 11:20:55.069 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [ToDoItems]
+OUTPUT 1
+WHERE [ToDoItemId] = @p0;
+2025-04-29 11:20:55.083 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:55.083 +05:00 [DBG] A data reader for 'ToDoList' on server 'localhost\SQLEXPRESS' is being disposed after spending 13ms reading results.
+2025-04-29 11:20:55.086 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:55.086 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'localhost\SQLEXPRESS' (0ms).
+2025-04-29 11:20:55.097 +05:00 [DBG] An entity of type 'ToDoItem' tracked by 'MainContext' changed state from '"Deleted"' to '"Detached"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-04-29 11:20:55.103 +05:00 [DBG] SaveChanges completed for 'MainContext' with 1 entities written to the database.
+2025-04-29 11:20:55.121 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server) in 4145.4741ms
+2025-04-29 11:20:55.122 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-29 11:20:55.126 +05:00 [INF] Request to /api/toDoList/delete took 4.247 seconds with status code 200
+2025-04-29 11:20:55.131 +05:00 [DBG] 'MainContext' disposed.
+2025-04-29 11:20:55.137 +05:00 [DBG] Disposing connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:20:55.138 +05:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2025-04-29 11:20:55.139 +05:00 [INF] Request finished HTTP/2 DELETE https://localhost:7088/api/toDoList/delete?id=34 - 200 0 null 4311.1601ms
+2025-04-29 11:21:13.568 +05:00 [DBG] Connection id "0HNC6SMB2HSCK" accepted.
+2025-04-29 11:21:13.568 +05:00 [DBG] Connection id "0HNC6SMB2HSCK" started.
+2025-04-29 11:21:13.571 +05:00 [DBG] Connection id "0HNC6SMB2HSCL" accepted.
+2025-04-29 11:21:13.571 +05:00 [DBG] Connection id "0HNC6SMB2HSCK" received FIN.
+2025-04-29 11:21:13.571 +05:00 [DBG] Connection id "0HNC6SMB2HSCL" started.
+2025-04-29 11:21:13.573 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-04-29 11:21:13.574 +05:00 [DBG] Connection id "0HNC6SMB2HSCK" stopped.
+2025-04-29 11:21:13.574 +05:00 [DBG] Connection id "0HNC6SMB2HSCK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:21:13.587 +05:00 [DBG] Connection 0HNC6SMB2HSCL established using the following protocol: "Tls13"
+2025-04-29 11:21:13.597 +05:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7088/api/toDoList/delete?id=34 - null null
+2025-04-29 11:21:13.600 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/delete'
+2025-04-29 11:21:13.600 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)' with route pattern 'api/toDoList/delete' is valid for the request path '/api/toDoList/delete'
+2025-04-29 11:21:13.600 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-29 11:21:13.601 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:21:13.602 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-29 11:21:13.603 +05:00 [INF] Route matched with {action = "DeleteToDoItemById", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task DeleteToDoItemByIdAsync(Int64) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:21:13.603 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:21:13.603 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:21:13.603 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:21:13.604 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:21:13.604 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:21:13.605 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:21:13.608 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:21:13.609 +05:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int64' ...
+2025-04-29 11:21:13.610 +05:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int64' using the name 'id' in request data ...
+2025-04-29 11:21:13.610 +05:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int64'.
+2025-04-29 11:21:13.610 +05:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int64'.
+2025-04-29 11:21:13.610 +05:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int64' ...
+2025-04-29 11:21:13.611 +05:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int64'.
+2025-04-29 11:21:13.611 +05:00 [INF] DeleteToDoItemByIdAsync method worked
+2025-04-29 11:21:13.638 +05:00 [DBG] Entity Framework Core 9.0.4 initialized 'MainContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.4' with options: EngineType=SqlServer 
+2025-04-29 11:21:13.641 +05:00 [DBG] Creating DbConnection.
+2025-04-29 11:21:13.641 +05:00 [DBG] Created DbConnection. (0ms).
+2025-04-29 11:21:13.641 +05:00 [DBG] Opening connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:21:13.642 +05:00 [DBG] Opened connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:21:13.642 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-04-29 11:21:13.643 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2025-04-29 11:21:13.643 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2025-04-29 11:21:13.644 +05:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-29 11:21:13.651 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[ToDoItemId], [t].[CreatedAt], [t].[Description], [t].[DueDate], [t].[IsCompleted], [t].[Title]
+FROM [ToDoItems] AS [t]
+WHERE [t].[ToDoItemId] = @__id_0
+2025-04-29 11:21:13.652 +05:00 [DBG] Closing data reader to 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:21:13.652 +05:00 [DBG] A data reader for 'ToDoList' on server 'localhost\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2025-04-29 11:21:13.652 +05:00 [DBG] Closing connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:21:13.653 +05:00 [DBG] Closed connection to database 'ToDoList' on server 'localhost\SQLEXPRESS' (0ms).
+2025-04-29 11:21:13.844 +05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-29 11:21:13.855 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server) in 250.8648ms
+2025-04-29 11:21:13.855 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.DeleteToDoItemByIdAsync (ToDoList.Server)'
+2025-04-29 11:21:13.856 +05:00 [INF] Request to /api/toDoList/delete took 0.254 seconds with status code 404
+2025-04-29 11:21:13.857 +05:00 [DBG] Connection id "0HNC6SMB2HSCL" completed keep alive response.
+2025-04-29 11:21:13.857 +05:00 [DBG] 'MainContext' disposed.
+2025-04-29 11:21:13.857 +05:00 [DBG] Disposing connection to database 'ToDoList' on server 'localhost\SQLEXPRESS'.
+2025-04-29 11:21:13.857 +05:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2025-04-29 11:21:13.857 +05:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7088/api/toDoList/delete?id=34 - 404 null application/json; charset=utf-8 260.7453ms
+2025-04-29 11:21:16.474 +05:00 [DBG] Connection id "0HNC6SMB2HSCJ" received FIN.
+2025-04-29 11:21:16.475 +05:00 [DBG] Connection id "0HNC6SMB2HSCJ" is closed. The last processed stream ID was 1.
+2025-04-29 11:21:16.475 +05:00 [DBG] Connection id "0HNC6SMB2HSCJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:21:16.476 +05:00 [DBG] The connection queue processing loop for 0HNC6SMB2HSCJ completed.
+2025-04-29 11:21:16.477 +05:00 [DBG] Connection id "0HNC6SMB2HSCJ" stopped.
+2025-04-29 11:22:17.699 +05:00 [DBG] Connection id "0HNC6SMB2HSCM" accepted.
+2025-04-29 11:22:17.700 +05:00 [DBG] Connection id "0HNC6SMB2HSCM" started.
+2025-04-29 11:22:17.739 +05:00 [DBG] Connection 0HNC6SMB2HSCM established using the following protocol: "Tls13"
+2025-04-29 11:22:17.756 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7088/api/toDoList/add - application/json 91
+2025-04-29 11:22:17.756 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/add'
+2025-04-29 11:22:17.757 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)' with route pattern 'api/toDoList/add' is valid for the request path '/api/toDoList/add'
+2025-04-29 11:22:17.758 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:22:17.758 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:22:17.760 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:22:17.760 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:22:17.760 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:22:17.772 +05:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] AddToDoItem(ToDoList.Bll.DTOs.ToDoItemCreateDto) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:22:17.772 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:22:17.772 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:22:17.773 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:22:17.773 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:22:17.773 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:22:17.774 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:22:17.783 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:22:17.784 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:22:17.787 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' using the name '' in request data ...
+2025-04-29 11:22:17.792 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-29 11:22:17.819 +05:00 [DBG] Connection id "0HNC6SMB2HSCM", Request id "0HNC6SMB2HSCM:00000001": started reading request body.
+2025-04-29 11:22:17.820 +05:00 [DBG] Connection id "0HNC6SMB2HSCM", Request id "0HNC6SMB2HSCM:00000001": done reading request body.
+2025-04-29 11:22:17.854 +05:00 [DBG] JSON input formatter succeeded, deserializing to type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'
+2025-04-29 11:22:17.855 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:22:17.855 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:22:17.856 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:22:17.867 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:22:17.870 +05:00 [INF] AddToDoItem method worked
+2025-04-29 11:22:18.102 +05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-29 11:22:18.103 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server) in 329.33ms
+2025-04-29 11:22:18.103 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:22:18.104 +05:00 [INF] Request to /api/toDoList/add took 0.345 seconds with status code 500
+2025-04-29 11:22:18.104 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7088/api/toDoList/add - 500 null application/json; charset=utf-8 348.4014ms
+2025-04-29 11:22:21.562 +05:00 [DBG] Connection id "0HNC6SMB2HSCM" received FIN.
+2025-04-29 11:22:21.562 +05:00 [DBG] Connection id "0HNC6SMB2HSCM" is closed. The last processed stream ID was 1.
+2025-04-29 11:22:21.563 +05:00 [DBG] Connection id "0HNC6SMB2HSCM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:22:21.564 +05:00 [DBG] The connection queue processing loop for 0HNC6SMB2HSCM completed.
+2025-04-29 11:22:21.564 +05:00 [DBG] Connection id "0HNC6SMB2HSCM" stopped.
+2025-04-29 11:36:04.337 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-04-29 11:36:04.463 +05:00 [DBG] Hosting starting
+2025-04-29 11:36:04.475 +05:00 [DBG] Middleware loaded
+2025-04-29 11:36:04.477 +05:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16515 B).
+2025-04-29 11:36:04.477 +05:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-04-29 11:36:04.611 +05:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-04-29 11:36:04.703 +05:00 [INF] Now listening on: https://localhost:7088
+2025-04-29 11:36:04.704 +05:00 [INF] Now listening on: http://localhost:5195
+2025-04-29 11:36:04.704 +05:00 [DBG] Loaded hosting startup assembly ToDoList.Server
+2025-04-29 11:36:04.704 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-04-29 11:36:04.704 +05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-04-29 11:36:04.704 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-04-29 11:36:04.788 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 11:36:04.788 +05:00 [INF] Hosting environment: Development
+2025-04-29 11:36:04.788 +05:00 [INF] Content root path: C:\Users\WINDOWS 11\source\repos\ToDoList.git\src\ToDoList\ToDoList.Server
+2025-04-29 11:36:04.789 +05:00 [DBG] Hosting started
+2025-04-29 11:36:05.125 +05:00 [DBG] Connection id "0HNC6T0F0RR43" accepted.
+2025-04-29 11:36:05.128 +05:00 [DBG] Connection id "0HNC6T0F0RR43" started.
+2025-04-29 11:36:05.130 +05:00 [DBG] Connection id "0HNC6T0F0RR44" received FIN.
+2025-04-29 11:36:05.130 +05:00 [DBG] Connection id "0HNC6T0F0RR43" received FIN.
+2025-04-29 11:36:05.132 +05:00 [DBG] Connection id "0HNC6T0F0RR44" accepted.
+2025-04-29 11:36:05.139 +05:00 [DBG] Connection id "0HNC6T0F0RR44" started.
+2025-04-29 11:36:05.156 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-04-29 11:36:05.156 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-04-29 11:36:05.167 +05:00 [DBG] Connection id "0HNC6T0F0RR43" stopped.
+2025-04-29 11:36:05.167 +05:00 [DBG] Connection id "0HNC6T0F0RR44" stopped.
+2025-04-29 11:36:05.173 +05:00 [DBG] Connection id "0HNC6T0F0RR43" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:36:05.173 +05:00 [DBG] Connection id "0HNC6T0F0RR44" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:36:05.385 +05:00 [DBG] Connection id "0HNC6T0F0RR45" accepted.
+2025-04-29 11:36:05.385 +05:00 [DBG] Connection id "0HNC6T0F0RR45" started.
+2025-04-29 11:36:05.431 +05:00 [DBG] Connection 0HNC6T0F0RR45 established using the following protocol: "Tls13"
+2025-04-29 11:36:05.541 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/swagger/index.html - null null
+2025-04-29 11:36:05.739 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-04-29 11:36:05.754 +05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-04-29 11:36:05.754 +05:00 [DBG] Request did not match any endpoints
+2025-04-29 11:36:05.795 +05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-04-29 11:36:05.797 +05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-04-29 11:36:05.820 +05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2025-04-29 11:36:05.820 +05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-04-29 11:36:05.827 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/swagger/index.html - 200 null text/html;charset=utf-8 298.8733ms
+2025-04-29 11:36:05.832 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-29 11:36:05.832 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/_vs/browserLink - null null
+2025-04-29 11:36:05.839 +05:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-04-29 11:36:05.841 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 9.9614ms
+2025-04-29 11:36:05.938 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.0989ms
+2025-04-29 11:36:05.988 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/swagger/v1/swagger.json - null null
+2025-04-29 11:36:05.989 +05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-04-29 11:36:05.989 +05:00 [DBG] Request did not match any endpoints
+2025-04-29 11:36:05.999 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.3394ms
+2025-04-29 11:36:16.884 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7088/api/toDoList/add - application/json 91
+2025-04-29 11:36:16.898 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/add'
+2025-04-29 11:36:16.909 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)' with route pattern 'api/toDoList/add' is valid for the request path '/api/toDoList/add'
+2025-04-29 11:36:16.910 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:36:16.916 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:36:16.921 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:36:16.922 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:36:16.925 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:36:16.989 +05:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] AddToDoItem(ToDoList.Bll.DTOs.ToDoItemCreateDto) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:36:16.992 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:36:16.993 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:36:16.994 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:36:16.994 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:36:16.994 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:36:16.997 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:36:17.354 +05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-04-29 11:36:17.598 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:36:17.632 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:36:17.637 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' using the name '' in request data ...
+2025-04-29 11:36:17.639 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-29 11:36:17.657 +05:00 [DBG] Connection id "0HNC6T0F0RR45", Request id "0HNC6T0F0RR45:00000009": started reading request body.
+2025-04-29 11:36:17.657 +05:00 [DBG] Connection id "0HNC6T0F0RR45", Request id "0HNC6T0F0RR45:00000009": done reading request body.
+2025-04-29 11:36:17.686 +05:00 [DBG] JSON input formatter succeeded, deserializing to type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'
+2025-04-29 11:36:17.687 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:36:17.688 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:36:17.689 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:36:17.700 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:36:17.706 +05:00 [INF] AddToDoItem method worked
+2025-04-29 11:36:17.970 +05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-29 11:36:18.000 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server) in 993.9924ms
+2025-04-29 11:36:18.001 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:36:18.005 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7088/api/toDoList/add - 500 null application/json; charset=utf-8 1120.4325ms
+2025-04-29 11:36:33.095 +05:00 [DBG] Connection id "0HNC6T0F0RR45" received FIN.
+2025-04-29 11:36:33.100 +05:00 [DBG] The connection queue processing loop for 0HNC6T0F0RR45 completed.
+2025-04-29 11:36:33.105 +05:00 [DBG] Connection id "0HNC6T0F0RR45" is closed. The last processed stream ID was 9.
+2025-04-29 11:36:33.106 +05:00 [DBG] Connection id "0HNC6T0F0RR45" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:36:33.107 +05:00 [DBG] Connection id "0HNC6T0F0RR45" stopped.
+2025-04-29 11:37:02.414 +05:00 [DBG] Connection id "0HNC6T0F0RR46" accepted.
+2025-04-29 11:37:02.415 +05:00 [DBG] Connection id "0HNC6T0F0RR46" started.
+2025-04-29 11:37:02.427 +05:00 [DBG] Connection 0HNC6T0F0RR46 established using the following protocol: "Tls13"
+2025-04-29 11:37:02.447 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7088/api/toDoList/add - application/json 91
+2025-04-29 11:37:02.451 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/add'
+2025-04-29 11:37:02.451 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)' with route pattern 'api/toDoList/add' is valid for the request path '/api/toDoList/add'
+2025-04-29 11:37:02.451 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:37:02.452 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:37:02.489 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:37:02.491 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:37:02.492 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:37:02.496 +05:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] AddToDoItem(ToDoList.Bll.DTOs.ToDoItemCreateDto) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:37:02.496 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:37:02.496 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:37:02.497 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:37:02.497 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:37:02.497 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:37:02.497 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:37:02.515 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:37:02.516 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:37:02.517 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' using the name '' in request data ...
+2025-04-29 11:37:02.517 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-29 11:37:02.517 +05:00 [DBG] Connection id "0HNC6T0F0RR46", Request id "0HNC6T0F0RR46:00000001": started reading request body.
+2025-04-29 11:37:02.517 +05:00 [DBG] Connection id "0HNC6T0F0RR46", Request id "0HNC6T0F0RR46:00000001": done reading request body.
+2025-04-29 11:37:02.517 +05:00 [DBG] JSON input formatter succeeded, deserializing to type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'
+2025-04-29 11:37:02.518 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:37:02.518 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:37:02.518 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:37:02.518 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:37:02.519 +05:00 [INF] AddToDoItem method worked
+2025-04-29 11:37:02.635 +05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-29 11:37:02.636 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server) in 139.5179ms
+2025-04-29 11:37:02.637 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:37:02.638 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7088/api/toDoList/add - 500 null application/json; charset=utf-8 192.5454ms
+2025-04-29 11:37:03.141 +05:00 [DBG] Connection id "0HNC6T0F0RR46" received FIN.
+2025-04-29 11:37:03.142 +05:00 [DBG] Connection id "0HNC6T0F0RR46" is closed. The last processed stream ID was 1.
+2025-04-29 11:37:03.142 +05:00 [DBG] Connection id "0HNC6T0F0RR46" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:37:03.143 +05:00 [DBG] The connection queue processing loop for 0HNC6T0F0RR46 completed.
+2025-04-29 11:37:03.144 +05:00 [DBG] Connection id "0HNC6T0F0RR46" stopped.
+2025-04-29 11:37:18.598 +05:00 [DBG] Connection id "0HNC6T0F0RR47" accepted.
+2025-04-29 11:37:18.599 +05:00 [DBG] Connection id "0HNC6T0F0RR47" started.
+2025-04-29 11:37:18.611 +05:00 [DBG] Connection 0HNC6T0F0RR47 established using the following protocol: "Tls13"
+2025-04-29 11:37:18.613 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7088/api/toDoList/add - application/json 88
+2025-04-29 11:37:18.624 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/add'
+2025-04-29 11:37:18.627 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)' with route pattern 'api/toDoList/add' is valid for the request path '/api/toDoList/add'
+2025-04-29 11:37:18.627 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:37:18.633 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:37:18.634 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:37:18.634 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:37:18.634 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:37:18.635 +05:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] AddToDoItem(ToDoList.Bll.DTOs.ToDoItemCreateDto) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:37:18.635 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:37:18.635 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:37:18.635 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:37:18.635 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:37:18.635 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:37:18.636 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:37:18.644 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:37:18.645 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:37:18.645 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' using the name '' in request data ...
+2025-04-29 11:37:18.645 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-29 11:37:18.646 +05:00 [DBG] Connection id "0HNC6T0F0RR47", Request id "0HNC6T0F0RR47:00000001": started reading request body.
+2025-04-29 11:37:18.646 +05:00 [DBG] Connection id "0HNC6T0F0RR47", Request id "0HNC6T0F0RR47:00000001": done reading request body.
+2025-04-29 11:37:18.657 +05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.DateTime. Path: $.dueDate | LineNumber: 3 | BytePositionInLine: 36.
+2025-04-29 11:37:18.658 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:37:18.658 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:37:18.658 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:37:18.661 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:37:18.662 +05:00 [DBG] The request has model state errors, returning an error response.
+2025-04-29 11:37:18.666 +05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2025-04-29 11:37:18.669 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-04-29 11:37:18.674 +05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2025-04-29 11:37:18.676 +05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2025-04-29 11:37:18.677 +05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2025-04-29 11:37:18.680 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-04-29 11:37:18.681 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-04-29 11:37:18.734 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server) in 98.371ms
+2025-04-29 11:37:18.734 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:37:18.735 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7088/api/toDoList/add - 400 null application/problem+json; charset=utf-8 121.881ms
+2025-04-29 11:37:23.182 +05:00 [DBG] Connection id "0HNC6T0F0RR47" received FIN.
+2025-04-29 11:37:23.182 +05:00 [DBG] Connection id "0HNC6T0F0RR47" is closed. The last processed stream ID was 1.
+2025-04-29 11:37:23.183 +05:00 [DBG] Connection id "0HNC6T0F0RR47" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:37:23.183 +05:00 [DBG] The connection queue processing loop for 0HNC6T0F0RR47 completed.
+2025-04-29 11:37:23.187 +05:00 [DBG] Connection id "0HNC6T0F0RR47" stopped.
+2025-04-29 11:38:06.566 +05:00 [DBG] Connection id "0HNC6T0F0RR48" accepted.
+2025-04-29 11:38:06.567 +05:00 [DBG] Connection id "0HNC6T0F0RR48" started.
+2025-04-29 11:38:06.582 +05:00 [DBG] Connection 0HNC6T0F0RR48 established using the following protocol: "Tls13"
+2025-04-29 11:38:06.593 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7088/api/toDoList/add - application/json 88
+2025-04-29 11:38:06.594 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/add'
+2025-04-29 11:38:06.594 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)' with route pattern 'api/toDoList/add' is valid for the request path '/api/toDoList/add'
+2025-04-29 11:38:06.594 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:38:06.596 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:38:06.596 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:38:06.596 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:38:06.600 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:38:06.602 +05:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] AddToDoItem(ToDoList.Bll.DTOs.ToDoItemCreateDto) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:38:06.604 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:38:06.604 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:38:06.604 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:38:06.604 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:38:06.604 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:38:06.604 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:38:06.605 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:38:06.605 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:38:06.605 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' using the name '' in request data ...
+2025-04-29 11:38:06.606 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-29 11:38:06.606 +05:00 [DBG] Connection id "0HNC6T0F0RR48", Request id "0HNC6T0F0RR48:00000001": started reading request body.
+2025-04-29 11:38:06.606 +05:00 [DBG] Connection id "0HNC6T0F0RR48", Request id "0HNC6T0F0RR48:00000001": done reading request body.
+2025-04-29 11:38:06.607 +05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.DateTime. Path: $.dueDate | LineNumber: 3 | BytePositionInLine: 36.
+2025-04-29 11:38:06.607 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:38:06.607 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:38:06.607 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:38:06.607 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:38:06.607 +05:00 [DBG] The request has model state errors, returning an error response.
+2025-04-29 11:38:06.607 +05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2025-04-29 11:38:06.608 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-04-29 11:38:06.608 +05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2025-04-29 11:38:06.608 +05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2025-04-29 11:38:06.608 +05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2025-04-29 11:38:06.608 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-04-29 11:38:06.608 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-04-29 11:38:06.609 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server) in 4.3548ms
+2025-04-29 11:38:06.609 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:38:06.609 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7088/api/toDoList/add - 400 null application/problem+json; charset=utf-8 16.2049ms
+2025-04-29 11:38:08.265 +05:00 [DBG] Connection id "0HNC6T0F0RR48" received FIN.
+2025-04-29 11:38:08.265 +05:00 [DBG] Connection id "0HNC6T0F0RR48" is closed. The last processed stream ID was 1.
+2025-04-29 11:38:08.266 +05:00 [DBG] Connection id "0HNC6T0F0RR48" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:38:08.267 +05:00 [DBG] The connection queue processing loop for 0HNC6T0F0RR48 completed.
+2025-04-29 11:38:08.267 +05:00 [DBG] Connection id "0HNC6T0F0RR48" stopped.
+2025-04-29 11:38:22.573 +05:00 [DBG] Connection id "0HNC6T0F0RR49" accepted.
+2025-04-29 11:38:22.575 +05:00 [DBG] Connection id "0HNC6T0F0RR49" started.
+2025-04-29 11:38:22.585 +05:00 [DBG] Connection 0HNC6T0F0RR49 established using the following protocol: "Tls13"
+2025-04-29 11:38:22.590 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7088/api/toDoList/add - application/json 88
+2025-04-29 11:38:22.590 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/add'
+2025-04-29 11:38:22.590 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)' with route pattern 'api/toDoList/add' is valid for the request path '/api/toDoList/add'
+2025-04-29 11:38:22.590 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:38:22.591 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:38:22.591 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:38:22.591 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:38:22.592 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:38:22.592 +05:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] AddToDoItem(ToDoList.Bll.DTOs.ToDoItemCreateDto) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:38:22.593 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:38:22.593 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:38:22.593 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:38:22.593 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:38:22.593 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:38:22.593 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:38:22.595 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:38:22.595 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:38:22.595 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' using the name '' in request data ...
+2025-04-29 11:38:22.595 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-29 11:38:22.595 +05:00 [DBG] Connection id "0HNC6T0F0RR49", Request id "0HNC6T0F0RR49:00000001": started reading request body.
+2025-04-29 11:38:22.595 +05:00 [DBG] Connection id "0HNC6T0F0RR49", Request id "0HNC6T0F0RR49:00000001": done reading request body.
+2025-04-29 11:38:22.597 +05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.DateTime. Path: $.dueDate | LineNumber: 3 | BytePositionInLine: 36.
+2025-04-29 11:38:22.597 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:38:22.597 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:38:22.597 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:38:22.597 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:38:22.597 +05:00 [DBG] The request has model state errors, returning an error response.
+2025-04-29 11:38:22.597 +05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2025-04-29 11:38:22.597 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-04-29 11:38:22.598 +05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2025-04-29 11:38:22.598 +05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2025-04-29 11:38:22.598 +05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2025-04-29 11:38:22.598 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-04-29 11:38:22.598 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-04-29 11:38:22.598 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server) in 5.0999ms
+2025-04-29 11:38:22.598 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:38:22.598 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7088/api/toDoList/add - 400 null application/problem+json; charset=utf-8 8.4177ms
+2025-04-29 11:38:28.291 +05:00 [DBG] Connection id "0HNC6T0F0RR49" received FIN.
+2025-04-29 11:38:28.292 +05:00 [DBG] Connection id "0HNC6T0F0RR49" is closed. The last processed stream ID was 1.
+2025-04-29 11:38:28.292 +05:00 [DBG] The connection queue processing loop for 0HNC6T0F0RR49 completed.
+2025-04-29 11:38:28.292 +05:00 [DBG] Connection id "0HNC6T0F0RR49" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:38:28.296 +05:00 [DBG] Connection id "0HNC6T0F0RR49" stopped.
+2025-04-29 11:39:18.313 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-04-29 11:39:18.430 +05:00 [DBG] Hosting starting
+2025-04-29 11:39:18.443 +05:00 [DBG] Middleware loaded
+2025-04-29 11:39:18.445 +05:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16515 B).
+2025-04-29 11:39:18.446 +05:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-04-29 11:39:18.591 +05:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-04-29 11:39:18.725 +05:00 [INF] Now listening on: https://localhost:7088
+2025-04-29 11:39:18.725 +05:00 [INF] Now listening on: http://localhost:5195
+2025-04-29 11:39:18.726 +05:00 [DBG] Loaded hosting startup assembly ToDoList.Server
+2025-04-29 11:39:18.726 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-04-29 11:39:18.726 +05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-04-29 11:39:18.726 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-04-29 11:39:18.807 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 11:39:18.807 +05:00 [INF] Hosting environment: Development
+2025-04-29 11:39:18.808 +05:00 [INF] Content root path: C:\Users\WINDOWS 11\source\repos\ToDoList.git\src\ToDoList\ToDoList.Server
+2025-04-29 11:39:18.808 +05:00 [DBG] Hosting started
+2025-04-29 11:39:19.168 +05:00 [DBG] Connection id "0HNC6T28RD94K" accepted.
+2025-04-29 11:39:19.169 +05:00 [DBG] Connection id "0HNC6T28RD94K" started.
+2025-04-29 11:39:19.178 +05:00 [DBG] Connection id "0HNC6T28RD94K" received FIN.
+2025-04-29 11:39:19.178 +05:00 [DBG] Connection id "0HNC6T28RD94L" received FIN.
+2025-04-29 11:39:19.187 +05:00 [DBG] Connection id "0HNC6T28RD94L" accepted.
+2025-04-29 11:39:19.188 +05:00 [DBG] Connection id "0HNC6T28RD94L" started.
+2025-04-29 11:39:19.202 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-04-29 11:39:19.202 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-04-29 11:39:19.214 +05:00 [DBG] Connection id "0HNC6T28RD94L" stopped.
+2025-04-29 11:39:19.214 +05:00 [DBG] Connection id "0HNC6T28RD94K" stopped.
+2025-04-29 11:39:19.223 +05:00 [DBG] Connection id "0HNC6T28RD94L" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:39:19.223 +05:00 [DBG] Connection id "0HNC6T28RD94K" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:39:19.334 +05:00 [DBG] Connection id "0HNC6T28RD94M" accepted.
+2025-04-29 11:39:19.335 +05:00 [DBG] Connection id "0HNC6T28RD94M" started.
+2025-04-29 11:39:19.419 +05:00 [DBG] Connection 0HNC6T28RD94M established using the following protocol: "Tls13"
+2025-04-29 11:39:19.539 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/swagger/index.html - null null
+2025-04-29 11:39:19.716 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-04-29 11:39:19.735 +05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-04-29 11:39:19.735 +05:00 [DBG] Request did not match any endpoints
+2025-04-29 11:39:19.794 +05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-04-29 11:39:19.797 +05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-04-29 11:39:19.832 +05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2025-04-29 11:39:19.833 +05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-04-29 11:39:19.841 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/swagger/index.html - 200 null text/html;charset=utf-8 314.0839ms
+2025-04-29 11:39:19.843 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-29 11:39:19.845 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/_vs/browserLink - null null
+2025-04-29 11:39:19.853 +05:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-04-29 11:39:19.855 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 11.8816ms
+2025-04-29 11:39:19.916 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.7287ms
+2025-04-29 11:39:19.986 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7088/swagger/v1/swagger.json - null null
+2025-04-29 11:39:19.986 +05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-04-29 11:39:19.987 +05:00 [DBG] Request did not match any endpoints
+2025-04-29 11:39:20.000 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7088/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.2469ms
+2025-04-29 11:39:29.572 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7088/api/toDoList/add - application/json 91
+2025-04-29 11:39:29.594 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/add'
+2025-04-29 11:39:29.605 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)' with route pattern 'api/toDoList/add' is valid for the request path '/api/toDoList/add'
+2025-04-29 11:39:29.608 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:39:29.617 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:39:29.623 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:39:29.624 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:39:29.628 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:39:29.695 +05:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] AddToDoItem(ToDoList.Bll.DTOs.ToDoItemCreateDto) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:39:29.700 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:39:29.701 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:39:29.702 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:39:29.702 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:39:29.703 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:39:29.707 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:39:30.042 +05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-04-29 11:39:30.301 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:39:30.327 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:39:30.332 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' using the name '' in request data ...
+2025-04-29 11:39:30.334 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-29 11:39:30.352 +05:00 [DBG] Connection id "0HNC6T28RD94M", Request id "0HNC6T28RD94M:00000009": started reading request body.
+2025-04-29 11:39:30.353 +05:00 [DBG] Connection id "0HNC6T28RD94M", Request id "0HNC6T28RD94M:00000009": done reading request body.
+2025-04-29 11:39:30.380 +05:00 [DBG] JSON input formatter succeeded, deserializing to type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'
+2025-04-29 11:39:30.381 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:39:30.382 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:39:30.382 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:39:30.398 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:39:30.405 +05:00 [INF] AddToDoItem method worked
+2025-04-29 11:39:30.638 +05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-29 11:39:30.657 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server) in 945.0609ms
+2025-04-29 11:39:30.657 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:39:30.661 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7088/api/toDoList/add - 500 null application/json; charset=utf-8 1094.3478ms
+2025-04-29 11:39:47.057 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7088/api/toDoList/add - application/json 88
+2025-04-29 11:39:47.060 +05:00 [DBG] 1 candidate(s) found for the request path '/api/toDoList/add'
+2025-04-29 11:39:47.060 +05:00 [DBG] Endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)' with route pattern 'api/toDoList/add' is valid for the request path '/api/toDoList/add'
+2025-04-29 11:39:47.060 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:39:47.061 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-04-29 11:39:47.062 +05:00 [DBG] The request has an origin header: 'https://localhost:7088'.
+2025-04-29 11:39:47.062 +05:00 [INF] CORS policy execution successful.
+2025-04-29 11:39:47.062 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:39:47.063 +05:00 [INF] Route matched with {action = "AddToDoItem", controller = "ToDoList"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] AddToDoItem(ToDoList.Bll.DTOs.ToDoItemCreateDto) on controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server).
+2025-04-29 11:39:47.063 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-04-29 11:39:47.064 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-04-29 11:39:47.064 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-04-29 11:39:47.065 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-04-29 11:39:47.065 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-04-29 11:39:47.065 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:39:47.087 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controller.ToDoListController (ToDoList.Server)
+2025-04-29 11:39:47.088 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:39:47.089 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' using the name '' in request data ...
+2025-04-29 11:39:47.089 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-29 11:39:47.090 +05:00 [DBG] Connection id "0HNC6T28RD94M", Request id "0HNC6T28RD94M:0000000B": started reading request body.
+2025-04-29 11:39:47.090 +05:00 [DBG] Connection id "0HNC6T28RD94M", Request id "0HNC6T28RD94M:0000000B": done reading request body.
+2025-04-29 11:39:47.102 +05:00 [DBG] JSON input formatter threw an exception: The JSON value could not be converted to System.DateTime. Path: $.dueDate | LineNumber: 3 | BytePositionInLine: 36.
+2025-04-29 11:39:47.103 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:39:47.103 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:39:47.103 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto' ...
+2025-04-29 11:39:47.105 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreateDto' of type 'ToDoList.Bll.DTOs.ToDoItemCreateDto'.
+2025-04-29 11:39:47.106 +05:00 [DBG] The request has model state errors, returning an error response.
+2025-04-29 11:39:47.109 +05:00 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2025-04-29 11:39:47.112 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-04-29 11:39:47.117 +05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]' and explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2025-04-29 11:39:47.118 +05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2025-04-29 11:39:47.120 +05:00 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2025-04-29 11:39:47.121 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2025-04-29 11:39:47.122 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-04-29 11:39:47.164 +05:00 [INF] Executed action ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server) in 99.035ms
+2025-04-29 11:39:47.165 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controller.ToDoListController.AddToDoItem (ToDoList.Server)'
+2025-04-29 11:39:47.165 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7088/api/toDoList/add - 400 null application/problem+json; charset=utf-8 108.4781ms
+2025-04-29 11:39:48.398 +05:00 [DBG] Connection id "0HNC6T28RD94M" received FIN.
+2025-04-29 11:39:48.403 +05:00 [DBG] The connection queue processing loop for 0HNC6T28RD94M completed.
+2025-04-29 11:39:48.410 +05:00 [DBG] Connection id "0HNC6T28RD94M" is closed. The last processed stream ID was 11.
+2025-04-29 11:39:48.410 +05:00 [DBG] Connection id "0HNC6T28RD94M" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-29 11:39:48.419 +05:00 [DBG] Connection id "0HNC6T28RD94M" stopped.
+2025-04-29 11:40:07.577 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-04-29 11:40:07.657 +05:00 [DBG] Hosting starting
+2025-04-29 11:40:07.667 +05:00 [DBG] Middleware loaded
+2025-04-29 11:40:07.669 +05:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16515 B).
+2025-04-29 11:40:07.670 +05:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
