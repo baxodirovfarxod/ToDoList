@@ -246,4 +246,8 @@ public class AdoNetWithSpAndFn : IToDoItemRepository
         return items;
     }
 
+    public Task<int> SelectTotalCountAsync()
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Net;
 
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     public static class CookieHelper
     {

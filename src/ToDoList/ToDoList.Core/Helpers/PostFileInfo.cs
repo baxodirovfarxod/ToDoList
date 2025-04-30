@@ -1,5 +1,5 @@
 ﻿using ToDoList.Errors;
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     public class PostFileInfo : IMultipartParameter
     {

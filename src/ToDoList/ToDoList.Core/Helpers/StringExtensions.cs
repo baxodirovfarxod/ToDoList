@@ -1,5 +1,5 @@
 ﻿using System.Text;
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     public static class StringExtensions
     {

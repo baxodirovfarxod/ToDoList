@@ -273,6 +273,11 @@ public class AdoNetToDoItemRepository : IToDoItemRepository
         return null;
     }
 
+    public Task<int> SelectTotalCountAsync()
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task UpdateToDoItemAsync(ToDoItem toDoItem)
     {
         string sql = @"

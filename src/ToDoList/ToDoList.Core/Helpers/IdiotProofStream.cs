@@ -1,4 +1,4 @@
-﻿namespace ProductProcessing
+﻿namespace ToDoList.Core.Helpers
 {
     /// <summary>
     ///     This class is used in cases with methods when the streams

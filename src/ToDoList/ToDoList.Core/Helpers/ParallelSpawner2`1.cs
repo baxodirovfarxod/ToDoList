@@ -1,4 +1,4 @@
-﻿namespace ProductProcessing
+﻿namespace ToDoList.Core.Helpers
 {
     public class ParallelSpawner2<T>
     {

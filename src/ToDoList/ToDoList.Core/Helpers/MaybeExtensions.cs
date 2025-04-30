@@ -1,4 +1,4 @@
-﻿namespace ProductProcessing
+﻿namespace ToDoList.Core.Helpers
 {
     public static class MaybeExtensions
     {

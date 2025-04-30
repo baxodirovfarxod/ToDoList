@@ -97,6 +97,11 @@ namespace ToDoList.Bll.Services
             return _mapper.Map<ToDoItemGetDto>(founded);
         }
 
+        public async Task<int> GetTotalCountAsync()
+        {
+            return await _toDoItemRepository.SelectTotalCountAsync();
+        }
+
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
         {
             var validationResult = _toDoItemUpdateDtoValidator.Validate(newItem);
