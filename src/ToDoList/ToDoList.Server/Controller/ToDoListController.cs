@@ -45,6 +45,7 @@ namespace ToDoList.Server.Controller
         {
             _logger.LogInformation($"GetAllToDoItemsAsync method worked");
 
+
             return await _toDoItemService.GetAllToDoItemsAsync(skip, take);
         }
 

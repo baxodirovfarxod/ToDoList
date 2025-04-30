@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using Microsoft.Extensions.Logging;
-using ToDoList.Errors;
 using ToDoList.Bll.DTOs;
 using ToDoList.Dal.Entity;
+using ToDoList.Errors;
 using ToDoList.Repository.ToDoItemRepository;
 
 namespace ToDoList.Bll.Services
@@ -15,7 +15,7 @@ namespace ToDoList.Bll.Services
         private readonly IValidator<ToDoItemUpdateDto> _toDoItemUpdateDtoValidator;
         private readonly IMapper _mapper;
         private readonly ILogger<ToDoItemService> _logger;
-        
+
 
         public ToDoItemService(IToDoItemRepository toDoItemRepository, IValidator<ToDoItemCreateDto> validator, IMapper mapper, ILogger<ToDoItemService> logger)
         {
@@ -95,6 +95,11 @@ namespace ToDoList.Bll.Services
                 throw new NotFoundException($"ToDoItem with id {id} not found.");
             }
             return _mapper.Map<ToDoItemGetDto>(founded);
+        }
+
+        public async Task<int> GetTotalCountAsync()
+        {
+            return await _toDoItemRepository.SelectTotalCountAsync();
         }
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)

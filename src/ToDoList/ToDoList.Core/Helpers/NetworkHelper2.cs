@@ -1,7 +1,7 @@
 using System.Net;
 using System.Text;
 using System.Web;
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     public class NetworkHelper2
     {

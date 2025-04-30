@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     internal class ErrorHelper<T> where T : Exception
     {

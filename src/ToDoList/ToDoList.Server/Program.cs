@@ -17,6 +17,7 @@ namespace ToDoList.Server
             builder.Services.AddControllers(options =>
             {
                 options.Filters.Add<ApiExceptionFilterAttribute>();
+                options.Filters.Add<ToDoListCountHeaderFilter>();
             });
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -31,7 +32,8 @@ namespace ToDoList.Server
                 {
                     policy.AllowAnyOrigin()
                           .AllowAnyMethod()
-                          .AllowAnyHeader();
+                          .AllowAnyHeader()
+                          .WithExposedHeaders("X-Pagination");
                 });
             });
 

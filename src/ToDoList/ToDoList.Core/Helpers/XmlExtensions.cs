@@ -1,7 +1,7 @@
 ﻿using System.Xml;
 using System.Xml.Serialization;
 
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     public static class XmlExtensions
     {

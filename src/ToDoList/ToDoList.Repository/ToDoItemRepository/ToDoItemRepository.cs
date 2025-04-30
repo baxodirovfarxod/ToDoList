@@ -98,6 +98,11 @@ public class ToDoItemRepository : IToDoItemRepository
         return toDoItem;
     }
 
+    public async Task<int> SelectTotalCountAsync()
+    {
+        return await MainContext.ToDoItems.CountAsync();
+    }
+
     public async Task UpdateToDoItemAsync(ToDoItem toDoItem)
     {
         MainContext.ToDoItems.Update(toDoItem);

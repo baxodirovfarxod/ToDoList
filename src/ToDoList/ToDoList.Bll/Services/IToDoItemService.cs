@@ -12,6 +12,7 @@ namespace ToDoList.Bll.Services
         Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem);
         Task<List<ToDoItemGetDto>> GetCompletedAsync(int skip, int take);
         Task<List<ToDoItemGetDto>> GetIncompleteAsync(int skip, int take);
+        Task<int> GetTotalCountAsync();
 
     }
 }
