@@ -15,6 +15,7 @@ public interface IToDoItemRepository
     Task<ICollection<ToDoItem>> SearchToDoItemsAsync(string keyword);
     Task<ICollection<ToDoItem>> SelectOverdueItemsAsync();
     Task<ICollection<ToDoItem>> GetUpcomingDeadlinesAsync();
+    Task<int> SelectTotalCountAsync();
 
 }
 

@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     public class EncryptionHelper
     {

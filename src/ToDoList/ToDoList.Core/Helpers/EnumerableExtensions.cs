@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Text;
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     public delegate TSeed AggregatorDelegate<TSeed, T>(int index, TSeed seed, T current);
     public static class EnumerableExtensions

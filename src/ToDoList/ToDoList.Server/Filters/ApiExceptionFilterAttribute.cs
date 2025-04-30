@@ -11,7 +11,7 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 
         var code = 500;
 
-        if (actionExecutedContext.Exception is NotFoundException)
+        if (actionExecutedContext.Exception is EntityNotFoundException)
         {
             code = 404; // Not found
         }

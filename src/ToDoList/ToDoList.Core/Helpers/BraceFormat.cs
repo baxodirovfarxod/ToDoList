@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     internal class BraceFormat
     {

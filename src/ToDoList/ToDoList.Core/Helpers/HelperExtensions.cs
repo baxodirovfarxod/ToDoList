@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace ProductProcessing
+namespace ToDoList.Core.Helpers
 {
     public static class HelperExtensions
     {
