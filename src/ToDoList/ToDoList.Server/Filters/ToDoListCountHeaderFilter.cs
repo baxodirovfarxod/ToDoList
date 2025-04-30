@@ -10,6 +10,7 @@ public class ToDoListCountHeaderFilter : IAsyncResultFilter
     public ToDoListCountHeaderFilter(IToDoItemService toDoItemService)
     {
         _toDoItemService = toDoItemService;
+
     }
 
     public async Task OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next)
